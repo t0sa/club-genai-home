@@ -1,6 +1,8 @@
 {
-  "meetup_url": "https://www.meetup.com/club-genai-bordeaux/",
+  "meetup_url": "https://www.meetup.com/groupe-meetup-bordeaux-developpement-web/events/313980672",
   "meetup_label": "Prochain meetup — À venir",
   "meetup_date": "",
-  "meetup_location": "Bordeaux"
+  "meetup_location": "Bordeaux",
+  "github_user": "t0sa",
+  "github_repo_prefix": "club-genai"
 }

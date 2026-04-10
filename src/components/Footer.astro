@@ -1,8 +1,9 @@
 ---
 interface Props {
   meetupUrl: string;
+  githubUser: string;
 }
-const { meetupUrl } = Astro.props;
+const { meetupUrl, githubUser } = Astro.props;
 const year = new Date().getFullYear();
 ---
 <footer class="border-t border-sand">
@@ -19,7 +20,7 @@ const year = new Date().getFullYear();
           Meetup
         </a>
         <a
-          href="https://github.com/t0sa"
+          href={`https://github.com/${githubUser}`}
           target="_blank"
           rel="noopener noreferrer"
           class="text-sm text-stone transition-colors hover:text-terracotta"

@@ -1,27 +1,29 @@
 #!/usr/bin/env node
 /**
  * fetch-projects.js
- * Fetches all public repos from t0sa that start with "club-genai"
- * and writes the result to src/data/projects.json.
+ * Fetches all public repos from the configured github_user that start with
+ * github_repo_prefix and writes the result to src/data/projects.json.
  *
  * Requires Node.js 18+ (built-in fetch).
  * GITHUB_TOKEN env var is optional but recommended to avoid rate limiting.
+ * Must be run from the repository root.
  */
 
-import { writeFileSync } from 'fs';
+import { writeFileSync, renameSync, readFileSync } from 'fs';
 import { resolve } from 'path';
 
-const GITHUB_USER      = 't0sa';
-const REPO_PREFIX      = 'club-genai';
-const OUTPUT_PATH      = resolve(process.cwd(), 'src/data/projects.json');
-const MAX_REPOS        = 20;
+const CONFIG       = JSON.parse(readFileSync(resolve(process.cwd(), 'src/data/config.json'), 'utf8'));
+const GITHUB_USER  = CONFIG.github_user;
+const REPO_PREFIX  = CONFIG.github_repo_prefix;
+const OUTPUT_PATH  = resolve(process.cwd(), 'src/data/projects.json');
+const MAX_REPOS    = 20;
 const FETCH_TIMEOUT_MS = 12_000;
 
 /**
  * Returns the URL if it uses http: or https:, otherwise returns ''.
  * Prevents javascript: and data: URIs from being stored as hrefs.
  */
-function safeUrl(raw) {
+export function safeUrl(raw) {
   if (!raw) return '';
   try {
     const u = new URL(raw);
@@ -65,12 +67,20 @@ async function main() {
       topics:      r.topics ?? [],
     }));
 
+  if (repos.length === 0) {
+    console.warn(`⚠️  No repos found matching prefix "${REPO_PREFIX}" — skipping write to preserve existing data.`);
+    return;
+  }
+
   const output = {
     updated_at: new Date().toISOString().split('T')[0],
     repos,
   };
 
-  writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2) + '\n');
+  const content = JSON.stringify(output, null, 2) + '\n';
+  const tmpPath = OUTPUT_PATH + '.tmp';
+  writeFileSync(tmpPath, content);
+  renameSync(tmpPath, OUTPUT_PATH);
   console.log(`✅ Wrote ${repos.length} repos to ${OUTPUT_PATH}`);
 }
 

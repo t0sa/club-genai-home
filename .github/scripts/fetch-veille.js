@@ -9,7 +9,7 @@
  * GITHUB_TOKEN env var is optional but recommended.
  */
 
-import { writeFileSync } from 'fs';
+import { writeFileSync, renameSync } from 'fs';
 import { resolve } from 'path';
 import { XMLParser } from 'fast-xml-parser';
 
@@ -31,7 +31,7 @@ const RSS_SOURCES = [
  * Returns the URL if it uses http: or https:, otherwise returns ''.
  * Prevents javascript: and data: URIs from being stored as hrefs.
  */
-function safeUrl(raw) {
+export function safeUrl(raw) {
   if (!raw || typeof raw !== 'string') return '';
   try {
     const u = new URL(raw);
@@ -41,7 +41,7 @@ function safeUrl(raw) {
 
 // ── RSS helpers ──────────────────────────────────────────────────────────────
 
-function cleanText(raw) {
+export function cleanText(raw) {
   if (!raw) return '';
   return String(raw)
     .replace(/<[^>]+>/g, ' ')
@@ -54,7 +54,7 @@ function cleanText(raw) {
     .trim();
 }
 
-function parseISODate(raw) {
+export function parseISODate(raw) {
   if (!raw) return '';
   try { return new Date(raw).toISOString().split('T')[0]; }
   catch { return ''; }
@@ -172,7 +172,15 @@ async function main() {
     items,
   };
 
-  writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2) + '\n');
+  if (items.length === 0) {
+    console.warn('⚠️  No veille items fetched from any source — skipping write to preserve existing data.');
+    return;
+  }
+
+  const content = JSON.stringify(output, null, 2) + '\n';
+  const tmpPath = OUTPUT_PATH + '.tmp';
+  writeFileSync(tmpPath, content);
+  renameSync(tmpPath, OUTPUT_PATH);
   console.log(`✅ Wrote ${items.length} items to ${OUTPUT_PATH}`);
 }
 

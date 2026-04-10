@@ -12,7 +12,7 @@ import projectsData from '../data/projects.json';
 import veilleData from '../data/veille.json';
 ---
 <Base>
-  <Nav meetupUrl={config.meetup_url} />
+  <Nav meetupUrl={config.meetup_url} githubUser={config.github_user} />
   <main>
     <Hero
       meetupUrl={config.meetup_url}
@@ -24,8 +24,8 @@ import veilleData from '../data/veille.json';
       meetupDate={config.meetup_date}
       meetupLocation={config.meetup_location}
     />
-    <ProjectList repos={projectsData.repos} />
+    <ProjectList repos={projectsData.repos} githubUser={config.github_user} repoPrefix={config.github_repo_prefix} />
     <VeilleGenAI items={veilleData.items} updatedAt={veilleData.updated_at} />
   </main>
-  <Footer meetupUrl={config.meetup_url} />
+  <Footer meetupUrl={config.meetup_url} githubUser={config.github_user} />
 </Base>
