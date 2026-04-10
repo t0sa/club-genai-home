@@ -4,10 +4,11 @@
 // - Moon icon shown in light mode (click to go dark)
 // - Sun icon shown in dark mode (click to go light)
 // - Persists choice in localStorage (key: 'theme')
-// - aria-label updated dynamically after each toggle
+// - aria-label updated dynamically: on load (to match saved theme) and on each toggle
+// - Uses data-theme-toggle attribute instead of id to support multiple instances
 ---
 <button
-  id="theme-toggle"
+  data-theme-toggle
   aria-label="Passer en mode sombre"
   class="text-stone hover:text-terracotta transition-colors dark:text-dark-muted dark:hover:text-terracotta"
 >
@@ -35,8 +36,20 @@
 
 <script>
   // Standard <script> (no is:inline) — bundled and deferred, correct for interaction handlers.
-  const btn = document.getElementById('theme-toggle');
-  if (btn) {
+
+  function updateToggleLabels(isDark: boolean) {
+    document.querySelectorAll<HTMLElement>('[data-theme-toggle]').forEach(btn => {
+      btn.setAttribute('aria-label', isDark ? 'Passer en mode clair' : 'Passer en mode sombre');
+    });
+  }
+
+  // Fix: sync aria-label with actual dark state at script load time (before any click).
+  // The anti-FOUC script may have added 'dark' to <html> before this deferred script runs,
+  // leaving the hardcoded SSG aria-label stale for screen-reader users.
+  updateToggleLabels(document.documentElement.classList.contains('dark'));
+
+  // Attach click handler to all toggle buttons (supports future mobile menu, etc.)
+  document.querySelectorAll<HTMLElement>('[data-theme-toggle]').forEach(btn => {
     btn.addEventListener('click', () => {
       const isDark = document.documentElement.classList.toggle('dark');
       try {
@@ -44,10 +57,7 @@
       } catch {
         // localStorage unavailable — toggle still works visually
       }
-      btn.setAttribute(
-        'aria-label',
-        isDark ? 'Passer en mode clair' : 'Passer en mode sombre'
-      );
+      updateToggleLabels(isDark);
     });
-  }
+  });
 </script>
