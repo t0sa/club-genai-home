@@ -6,16 +6,16 @@ interface Props {
 const { meetupUrl, githubUser } = Astro.props;
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-sand">
+<footer class="border-t border-sand dark:border-dark-border">
   <div class="mx-auto max-w-6xl px-6 py-8">
     <div class="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
-      <p class="text-sm text-stone">Club GenAI Bordeaux © {year}</p>
+      <p class="text-sm text-stone dark:text-dark-muted">Club GenAI Bordeaux © {year}</p>
       <div class="flex items-center gap-6">
         <a
           href={meetupUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-sm text-stone transition-colors hover:text-terracotta"
+          class="text-sm text-stone dark:text-dark-muted transition-colors hover:text-terracotta"
         >
           Meetup
         </a>
@@ -23,7 +23,7 @@ const year = new Date().getFullYear();
           href={`https://github.com/${githubUser}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-sm text-stone transition-colors hover:text-terracotta"
+          class="text-sm text-stone dark:text-dark-muted transition-colors hover:text-terracotta"
         >
           GitHub
         </a>

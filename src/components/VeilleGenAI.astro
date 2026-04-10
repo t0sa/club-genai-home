@@ -16,15 +16,15 @@ interface Props {
 const { items, updatedAt } = Astro.props;
 
 const SOURCE_CLASSES: Record<string, string> = {
-  'Anthropic': 'bg-orange-50 text-orange-700 border-orange-200',
-  'Google':    'bg-blue-50   text-blue-700   border-blue-200',
-  'OpenAI':    'bg-emerald-50 text-emerald-700 border-emerald-200',
-  'Meta AI':   'bg-sky-50    text-sky-700    border-sky-200',
-  'GitHub':    'bg-gray-100  text-gray-600   border-gray-200',
+  'Anthropic': 'bg-orange-50 text-orange-700 border-orange-200 dark:bg-orange-900/30 dark:text-orange-300 dark:border-orange-800',
+  'Google':    'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800',
+  'OpenAI':    'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-800',
+  'Meta AI':   'bg-sky-50 text-sky-700 border-sky-200 dark:bg-sky-900/30 dark:text-sky-300 dark:border-sky-800',
+  'GitHub':    'bg-gray-100 text-gray-600 border-gray-200 dark:bg-gray-800/50 dark:text-gray-300 dark:border-gray-700',
 };
 
 function sourceClass(source: string): string {
-  return SOURCE_CLASSES[source] ?? 'bg-sand text-stone border-sand';
+  return SOURCE_CLASSES[source] ?? 'bg-sand text-stone border-sand dark:bg-dark-border dark:text-dark-muted dark:border-dark-border';
 }
 
 const formattedUpdate = updatedAt
@@ -44,19 +44,19 @@ function shortDate(d: string): string {
   }
 }
 ---
-<section id="veille" class="border-t border-sand">
+<section id="veille" class="border-t border-sand dark:border-dark-border">
   <div class="mx-auto max-w-6xl px-6 py-16">
     <div class="mb-8 flex flex-wrap items-center gap-3">
-      <h2 class="text-2xl font-bold text-charcoal">Veille GenAI</h2>
+      <h2 class="text-2xl font-bold text-charcoal dark:text-dark-text">Veille GenAI</h2>
       {formattedUpdate && (
-        <span class="rounded-full border border-sand bg-cream-card px-3 py-1 text-xs text-stone">
+        <span class="rounded-full border border-sand bg-cream-card px-3 py-1 text-xs text-stone dark:border-dark-border dark:bg-dark-card dark:text-dark-muted">
           Mis à jour le {formattedUpdate}
         </span>
       )}
     </div>
 
     {items.length === 0 ? (
-      <p class="text-stone">
+      <p class="text-stone dark:text-dark-muted">
         La veille sera disponible dès lundi prochain — les articles sont récupérés automatiquement chaque semaine.
       </p>
     ) : (
@@ -66,28 +66,28 @@ function shortDate(d: string): string {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex flex-col rounded-xl border border-sand bg-white p-5 transition-all hover:border-terracotta/30 hover:shadow-sm"
+            class="flex flex-col rounded-xl border border-sand bg-white p-5 transition-all hover:border-terracotta/30 hover:shadow-sm dark:border-dark-border dark:bg-dark-card"
           >
             <div class="mb-3 flex items-center justify-between gap-2">
               <span class={`rounded-full border px-2.5 py-0.5 text-xs font-medium ${sourceClass(item.source)}`}>
                 {item.source}
               </span>
-              <span class="text-xs text-stone/60">
+              <span class="text-xs text-stone/60 dark:text-dark-muted">
                 {item.type === 'repo' ? 'repo' : 'article'}
               </span>
             </div>
 
-            <h3 class="mb-2 flex-1 text-sm font-semibold leading-snug text-charcoal line-clamp-3">
+            <h3 class="mb-2 flex-1 text-sm font-semibold leading-snug text-charcoal line-clamp-3 dark:text-dark-text">
               {item.title}
             </h3>
 
             {item.excerpt && (
-              <p class="mb-3 text-xs leading-relaxed text-stone line-clamp-2">
+              <p class="mb-3 text-xs leading-relaxed text-stone line-clamp-2 dark:text-dark-muted">
                 {item.excerpt}
               </p>
             )}
 
-            <p class="mt-auto text-xs text-stone/60">{shortDate(item.date)}</p>
+            <p class="mt-auto text-xs text-stone/60 dark:text-dark-muted">{shortDate(item.date)}</p>
           </a>
         ))}
       </div>

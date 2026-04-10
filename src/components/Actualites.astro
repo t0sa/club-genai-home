@@ -18,29 +18,29 @@ if (meetupDate) {
   } catch { /* ignore malformed dates */ }
 }
 ---
-<section class="border-t border-sand">
+<section class="border-t border-sand dark:border-dark-border">
   <div class="mx-auto max-w-6xl px-6 py-16">
-    <h2 class="mb-8 text-2xl font-bold text-charcoal">Actualités</h2>
+    <h2 class="mb-8 text-2xl font-bold text-charcoal dark:text-dark-text">Actualités</h2>
 
     <div class="max-w-2xl">
       <a
         href={meetupUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="group flex items-start gap-4 rounded-xl border border-l-4 border-sand border-l-terracotta bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+        class="group flex items-start gap-4 rounded-xl border border-l-4 border-sand border-l-terracotta bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-dark-border dark:bg-dark-card"
       >
-        <div class="mt-0.5 flex-shrink-0 rounded-lg bg-terracotta/10 p-2.5">
+        <div class="mt-0.5 flex-shrink-0 rounded-lg bg-terracotta/10 p-2.5 dark:bg-terracotta/20">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-terracotta" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
           </svg>
         </div>
 
         <div class="flex-1 min-w-0">
-          <p class="mb-1 text-xs font-medium uppercase tracking-wide text-stone">Prochain meetup</p>
-          <h3 class="mb-3 text-base font-semibold text-charcoal transition-colors group-hover:text-terracotta">
+          <p class="mb-1 text-xs font-medium uppercase tracking-wide text-stone dark:text-dark-muted">Prochain meetup</p>
+          <h3 class="mb-3 text-base font-semibold text-charcoal transition-colors group-hover:text-terracotta dark:text-dark-text">
             {meetupLabel}
           </h3>
-          <div class="flex flex-wrap gap-4 text-sm text-stone">
+          <div class="flex flex-wrap gap-4 text-sm text-stone dark:text-dark-muted">
             {formattedDate && (
               <span class="flex items-center gap-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">

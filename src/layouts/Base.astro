@@ -18,6 +18,19 @@ const base = import.meta.env.BASE_URL;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <!-- Anti-FOUC: applies saved theme before stylesheets render to prevent flash.
+         Must use is:inline so Astro emits it verbatim (not bundled/deferred). -->
+    <script is:inline>
+      (function () {
+        try {
+          if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          // localStorage unavailable (private browsing, browser policy) — default to light
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +39,7 @@ const base = import.meta.env.BASE_URL;
     />
     <link rel="icon" type="image/svg+xml" href={`${base}club-genai-logo.svg`} />
   </head>
-  <body class="bg-cream font-sans text-charcoal antialiased">
+  <body class="bg-cream font-sans text-charcoal antialiased dark:bg-dark-bg dark:text-dark-text">
     <slot />
   </body>
 </html>
