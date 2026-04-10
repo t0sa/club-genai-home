@@ -1,0 +1,31 @@
+---
+interface Props {
+  meetupUrl: string;
+  meetupLabel: string;
+}
+
+const { meetupUrl, meetupLabel } = Astro.props;
+---
+<section class="mx-auto max-w-6xl px-6 py-24 md:py-32">
+  <div class="max-w-2xl">
+    <p class="mb-3 text-sm font-medium uppercase tracking-widest text-terracotta">Bordeaux · IA générative</p>
+    <h1 class="mb-5 text-5xl font-bold tracking-tight text-charcoal md:text-6xl">
+      Club GenAI
+    </h1>
+    <p class="mb-8 max-w-lg text-base leading-relaxed text-charcoal/70">
+      Un espace d'exploration et de partage autour de l'intelligence artificielle générative.
+      Retrouvez-nous chaque mois à Bordeaux pour des talks, démos et échanges entre passionnés.
+    </p>
+    <a
+      href={meetupUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 rounded-lg bg-terracotta px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-terracotta-dark"
+    >
+      {meetupLabel}
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </a>
+  </div>
+</section>

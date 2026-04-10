@@ -1,0 +1,84 @@
+name: Update data (veille & projets)
+
+on:
+  # 7h00 CET  (hiver, UTC+1) → 06:00 UTC
+  # 7h00 CEST (été,   UTC+2) → 05:00 UTC
+  # Les deux crons sont déclarés pour couvrir les deux périodes.
+  # Un check d'idempotence empêche un double-run lors des semaines de transition.
+  schedule:
+    - cron: '0 6 * * 1'
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Empêche deux runs concurrents (ex: double cron sur semaine de transition DST).
+# Le run le plus récent annule le précédent si celui-ci n'a pas encore committé.
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Idempotence: si veille.json a déjà été mis à jour aujourd'hui, on stoppe.
+      - name: Check if already updated today
+        id: check
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          VEILLE_DATE=$(node -e "
+            try {
+              const d = JSON.parse(require('fs').readFileSync('src/data/veille.json', 'utf8'));
+              process.stdout.write(d.updated_at || '');
+            } catch { process.stdout.write(''); }
+          ")
+          echo "Today: $TODAY — veille.json updated_at: $VEILLE_DATE"
+          if [ "$TODAY" = "$VEILLE_DATE" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "ℹ️  Data already updated today, skipping."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch GitHub projects
+        id: fetch_projects
+        if: steps.check.outputs.skip != 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/fetch-projects.js
+
+      # Fetch veille uniquement si projects a réussi, pour éviter un commit partiel.
+      - name: Fetch veille GenAI
+        if: steps.check.outputs.skip != 'true' && steps.fetch_projects.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/fetch-veille.js
+
+      - name: Commit and push if changed
+        if: steps.check.outputs.skip != 'true' && steps.fetch_projects.outcome == 'success'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/projects.json src/data/veille.json
+          if git diff --cached --quiet; then
+            echo "ℹ️  No changes to commit."
+          else
+            git commit -m "chore: update data $(date -u +%Y-%m-%d)"
+            git push
+          fi

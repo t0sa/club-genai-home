@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Actualites from '../components/Actualites.astro';
+import ProjectList from '../components/ProjectList.astro';
+import VeilleGenAI from '../components/VeilleGenAI.astro';
+import Footer from '../components/Footer.astro';
+
+import config from '../data/config.json';
+import projectsData from '../data/projects.json';
+import veilleData from '../data/veille.json';
+---
+<Base>
+  <Nav meetupUrl={config.meetup_url} />
+  <main>
+    <Hero
+      meetupUrl={config.meetup_url}
+      meetupLabel={config.meetup_label}
+    />
+    <Actualites
+      meetupUrl={config.meetup_url}
+      meetupLabel={config.meetup_label}
+      meetupDate={config.meetup_date}
+      meetupLocation={config.meetup_location}
+    />
+    <ProjectList repos={projectsData.repos} />
+    <VeilleGenAI items={veilleData.items} updatedAt={veilleData.updated_at} />
+  </main>
+  <Footer meetupUrl={config.meetup_url} />
+</Base>

@@ -1,0 +1,112 @@
+---
+interface Repo {
+  name: string;
+  description: string;
+  url: string;
+  stars: number;
+  updated_at: string;
+  topics: string[];
+}
+
+interface Props {
+  repos: Repo[];
+}
+
+const { repos } = Astro.props;
+const INITIAL_COUNT = 5;
+---
+<section id="projets" class="border-t border-sand">
+  <div class="mx-auto max-w-6xl px-6 py-16">
+    <div class="mb-8 flex items-center justify-between">
+      <h2 class="text-2xl font-bold text-charcoal">Projets GitHub</h2>
+      <a
+        href="https://github.com/t0sa?tab=repositories&q=club-genai"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm text-stone hover:text-terracotta transition-colors"
+      >
+        Voir tout →
+      </a>
+    </div>
+
+    {repos.length === 0 ? (
+      <p class="text-stone">Les projets seront affichés dès la prochaine mise à jour automatique.</p>
+    ) : (
+      <>
+        <div id="project-grid" class="grid gap-4 sm:grid-cols-2">
+          {repos.map((repo, i) => (
+            <a
+              href={repo.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-index={i}
+              class={[
+                'project-card group rounded-xl border border-sand bg-cream-card p-5 transition-all hover:border-terracotta/40 hover:shadow-sm',
+                i >= INITIAL_COUNT ? 'hidden' : '',
+              ].join(' ')}
+            >
+              <div class="flex items-start justify-between gap-3">
+                <p class="min-w-0 flex-1 truncate font-mono text-sm font-medium text-charcoal group-hover:text-terracotta transition-colors">
+                  {repo.name}
+                </p>
+                <span class="flex flex-shrink-0 items-center gap-1 rounded-full border border-sand bg-white px-2.5 py-0.5 text-xs text-stone">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-terracotta/70" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                  {repo.stars}
+                </span>
+              </div>
+
+              <p class="mt-2 line-clamp-2 text-sm leading-relaxed text-stone">
+                {repo.description || 'Pas de description.'}
+              </p>
+
+              <div class="mt-3 flex items-center justify-between gap-2">
+                {repo.topics && repo.topics.length > 0 && (
+                  <div class="flex flex-wrap gap-1">
+                    {repo.topics.slice(0, 3).map(topic => (
+                      <span class="rounded-full bg-sand px-2 py-0.5 text-xs text-stone">{topic}</span>
+                    ))}
+                  </div>
+                )}
+                <span class="ml-auto text-xs font-medium text-terracotta">Voir →</span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {repos.length > INITIAL_COUNT && (
+          <div class="mt-6 flex justify-center">
+            <button
+              id="load-more-btn"
+              data-initial-count={INITIAL_COUNT}
+              class="rounded-lg border border-terracotta px-6 py-2.5 text-sm font-semibold text-terracotta transition-colors hover:bg-terracotta hover:text-white"
+            >
+              Voir plus +
+            </button>
+          </div>
+        )}
+      </>
+    )}
+  </div>
+</section>
+
+<script>
+  const btn = document.getElementById('load-more-btn');
+  if (btn) {
+    let shown = parseInt(btn.dataset.initialCount ?? '5', 10);
+    const step = 5;
+
+    btn.addEventListener('click', () => {
+      const cards = document.querySelectorAll<HTMLElement>('.project-card');
+      const next = Math.min(shown + step, cards.length);
+      for (let i = shown; i < next; i++) {
+        cards[i].classList.remove('hidden');
+      }
+      shown = next;
+      if (shown >= cards.length) {
+        btn.style.display = 'none';
+      }
+    });
+  }
+</script>

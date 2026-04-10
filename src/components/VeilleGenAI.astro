@@ -1,0 +1,96 @@
+---
+interface VeilleItem {
+  title: string;
+  url: string;
+  source: string;
+  date: string;
+  excerpt: string;
+  type: 'article' | 'repo';
+}
+
+interface Props {
+  items: VeilleItem[];
+  updatedAt: string;
+}
+
+const { items, updatedAt } = Astro.props;
+
+const SOURCE_CLASSES: Record<string, string> = {
+  'Anthropic': 'bg-orange-50 text-orange-700 border-orange-200',
+  'Google':    'bg-blue-50   text-blue-700   border-blue-200',
+  'OpenAI':    'bg-emerald-50 text-emerald-700 border-emerald-200',
+  'Meta AI':   'bg-sky-50    text-sky-700    border-sky-200',
+  'GitHub':    'bg-gray-100  text-gray-600   border-gray-200',
+};
+
+function sourceClass(source: string): string {
+  return SOURCE_CLASSES[source] ?? 'bg-sand text-stone border-sand';
+}
+
+const formattedUpdate = updatedAt
+  ? new Date(updatedAt + 'T12:00:00').toLocaleDateString('fr-FR', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    })
+  : null;
+
+function shortDate(d: string): string {
+  if (!d) return '';
+  try {
+    return new Date(d + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
+  } catch {
+    return '';
+  }
+}
+---
+<section id="veille" class="border-t border-sand">
+  <div class="mx-auto max-w-6xl px-6 py-16">
+    <div class="mb-8 flex flex-wrap items-center gap-3">
+      <h2 class="text-2xl font-bold text-charcoal">Veille GenAI</h2>
+      {formattedUpdate && (
+        <span class="rounded-full border border-sand bg-cream-card px-3 py-1 text-xs text-stone">
+          Mis à jour le {formattedUpdate}
+        </span>
+      )}
+    </div>
+
+    {items.length === 0 ? (
+      <p class="text-stone">
+        La veille sera disponible dès lundi prochain — les articles sont récupérés automatiquement chaque semaine.
+      </p>
+    ) : (
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map(item => (
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col rounded-xl border border-sand bg-white p-5 transition-all hover:border-terracotta/30 hover:shadow-sm"
+          >
+            <div class="mb-3 flex items-center justify-between gap-2">
+              <span class={`rounded-full border px-2.5 py-0.5 text-xs font-medium ${sourceClass(item.source)}`}>
+                {item.source}
+              </span>
+              <span class="text-xs text-stone/60">
+                {item.type === 'repo' ? 'repo' : 'article'}
+              </span>
+            </div>
+
+            <h3 class="mb-2 flex-1 text-sm font-semibold leading-snug text-charcoal line-clamp-3">
+              {item.title}
+            </h3>
+
+            {item.excerpt && (
+              <p class="mb-3 text-xs leading-relaxed text-stone line-clamp-2">
+                {item.excerpt}
+              </p>
+            )}
+
+            <p class="mt-auto text-xs text-stone/60">{shortDate(item.date)}</p>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
