@@ -27,7 +27,6 @@ const RSS_SOURCES = [
   { url: 'https://huggingface.co/blog/feed.xml',                         source: 'Hugging Face' },
   { url: 'https://blog.google/technology/ai/rss/',                       source: 'Google AI'    },
   { url: 'https://blogs.nvidia.com/feed/',                               source: 'Nvidia'       },
-  { url: 'https://feeds.arstechnica.com/arstechnica/technology-lab',     source: 'Ars Technica' },
 ];
 
 // ── URL validation ───────────────────────────────────────────────────────────
