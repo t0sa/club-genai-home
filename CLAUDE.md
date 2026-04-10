@@ -79,6 +79,37 @@ Le workflow `update-data.yml` déclare deux crons :
 
 Cela couvre 7h00 heure française toute l'année sans modifier le workflow à chaque changement d'heure. Un check d'idempotence empêche un double-run lors des semaines de transition (dernier dimanche de mars et dernier dimanche d'octobre).
 
+## Système de thème (dark mode)
+
+Le site supporte un mode sombre optionnel activé par l'utilisateur.
+
+| Élément | Valeur |
+|---------|--------|
+| Clé localStorage | `theme` |
+| Valeurs | `"dark"` ou `"light"` |
+| Classe cible | `dark` sur l'élément `<html>` |
+| Défaut | light mode (prefers-color-scheme ignoré) |
+
+**Comportement :** au clic sur le toggle (icône lune/soleil dans la Nav), la classe `dark` est ajoutée ou retirée sur `<html>` et le choix est sauvegardé dans `localStorage`. Au chargement suivant, un script `is:inline` dans `<head>` lit `localStorage.getItem('theme')` et applique la classe avant le rendu CSS (anti-FOUC).
+
+**Pour un agent — forcer un thème via Playwright MCP :**
+
+```js
+// Activer dark mode (session uniquement, ne persiste pas si localStorage n'est pas écrit)
+await page.evaluate(() => {
+  document.documentElement.classList.add('dark');
+  localStorage.setItem('theme', 'dark');
+});
+
+// Revenir en light mode
+await page.evaluate(() => {
+  document.documentElement.classList.remove('dark');
+  localStorage.setItem('theme', 'light');
+});
+```
+
+Note : `localStorage` est scopé à l'origine (`t0sa.github.io`). Toute modification est persistée pour les navigations suivantes sur le même origin.
+
 ## Données documentées
 
 - `docs/solutions/` — solutions aux problèmes rencontrés, avec frontmatter YAML pour la recherche
