@@ -1,13 +1,14 @@
 name: Update data (veille & projets)
 
 on:
-  # 7h00 CET  (hiver, UTC+1) → 06:00 UTC
-  # 7h00 CEST (été,   UTC+2) → 05:00 UTC
-  # Les deux crons sont déclarés pour couvrir les deux périodes.
-  # Un check d'idempotence empêche un double-run lors des semaines de transition.
+  # 7h00 tous les matins, heure française (DST-aware) :
+  #   CET  (hiver, UTC+1) → 06:00 UTC
+  #   CEST (été,   UTC+2) → 05:00 UTC
+  # Les deux crons couvrent les deux périodes ; le check d'idempotence
+  # empêche un double-run lors des semaines de transition.
   schedule:
-    - cron: '0 6 * * 1'
-    - cron: '0 5 * * 1'
+    - cron: '0 6 * * *'
+    - cron: '0 5 * * *'
   workflow_dispatch:
 
 permissions:
