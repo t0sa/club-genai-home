@@ -28,6 +28,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Fetch fresh data before building so every deploy includes up-to-date
+      # projects and veille, regardless of when the Monday cron last ran.
+      - name: Fetch GitHub projects
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/fetch-projects.js
+
+      - name: Fetch veille GenAI
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/fetch-veille.js
+
       - name: Build site
         run: npm run build
 

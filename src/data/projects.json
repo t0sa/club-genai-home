@@ -1,4 +1,21 @@
 {
   "updated_at": "2026-04-10",
-  "repos": []
+  "repos": [
+    {
+      "name": "club-genai-home",
+      "description": "",
+      "url": "https://github.com/t0sa/club-genai-home",
+      "stars": 0,
+      "updated_at": "2026-04-10",
+      "topics": []
+    },
+    {
+      "name": "club-genai-mcp",
+      "description": "",
+      "url": "https://github.com/t0sa/club-genai-mcp",
+      "stars": 0,
+      "updated_at": "2026-03-19",
+      "topics": []
+    }
+  ]
 }

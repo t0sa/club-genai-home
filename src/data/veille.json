@@ -1,4 +1,125 @@
 {
   "updated_at": "2026-04-10",
-  "items": []
+  "items": [
+    {
+      "title": "Using projects in ChatGPT",
+      "url": "https://openai.com/academy/projects",
+      "source": "OpenAI",
+      "date": "2026-04-10",
+      "excerpt": "Learn how to use orojects in ChatGPT to organize chats, files, and instructions, manage ongoing work, and collaborate more effectively.",
+      "type": "article"
+    },
+    {
+      "title": "Prompting fundamentals",
+      "url": "https://openai.com/academy/prompting",
+      "source": "OpenAI",
+      "date": "2026-04-10",
+      "excerpt": "Learn prompting fundamentals and how to write clear, effective prompts to get better, more useful responses from ChatGPT.",
+      "type": "article"
+    },
+    {
+      "title": "Using skills",
+      "url": "https://openai.com/academy/skills",
+      "source": "OpenAI",
+      "date": "2026-04-10",
+      "excerpt": "Learn how to create and use ChatGPT skills to build reusable workflows, automate recurring tasks, and ensure consistent, high-quality outputs.",
+      "type": "article"
+    },
+    {
+      "title": "Analyzing data with ChatGPT",
+      "url": "https://openai.com/academy/data-analysis",
+      "source": "OpenAI",
+      "date": "2026-04-10",
+      "excerpt": "Learn how to analyze data with ChatGPT by exploring datasets, generating insights, creating visualizations, and turning findings into actionable decisions.",
+      "type": "article"
+    },
+    {
+      "title": "Creating images with ChatGPT",
+      "url": "https://openai.com/academy/image-generation",
+      "source": "OpenAI",
+      "date": "2026-04-10",
+      "excerpt": "Learn how to create and refine images with ChatGPT using clear prompts, iterate on designs, and generate high-quality visuals in minutes.",
+      "type": "article"
+    },
+    {
+      "title": "andresrodriguez55/knowledge-base — Knowledge Copilot is a Retrieval-Augmented Generation (RAG) application with multi tenant isolation based on  LDAP for companies.  It allows organizations to interact with their private document libraries securely,  providing accurate answers with transparent quality scoring, source citations and traceability.",
+      "url": "https://github.com/andresrodriguez55/knowledge-base",
+      "source": "GitHub",
+      "date": "2026-04-08",
+      "excerpt": "Knowledge Copilot is a Retrieval-Augmented Generation (RAG) application with multi tenant isolation based on  LDAP for companies.  It allows organizations to interact with their private document libraries securely,  providing accurate answers with transparent quality scoring, source citations and traceability.",
+      "type": "repo"
+    },
+    {
+      "title": "joyehuang/Learn-Open-Harness — 🤖 Official Interactive Tutorial for OpenHarness – Zero to Hero in 12 Chapters | Learn OpenHarness like Claude Code: Agent Loop, Tools, Memory, Multi-Agent | 面向零基础的 AI Agent 交互式教程",
+      "url": "https://github.com/joyehuang/Learn-Open-Harness",
+      "source": "GitHub",
+      "date": "2026-04-07",
+      "excerpt": "🤖 Official Interactive Tutorial for OpenHarness – Zero to Hero in 12 Chapters | Learn OpenHarness like Claude Code: Agent Loop, Tools, Memory, Multi-Agent | 面向零基础的 AI Agent 交互式教程",
+      "type": "repo"
+    },
+    {
+      "title": "aarora79/personal-knowledge-base — LLM-authored knowledge base on Generative AI. Raw sources are clipped and compiled into interlinked wiki articles by Claude Code.",
+      "url": "https://github.com/aarora79/personal-knowledge-base",
+      "source": "GitHub",
+      "date": "2026-04-07",
+      "excerpt": "LLM-authored knowledge base on Generative AI. Raw sources are clipped and compiled into interlinked wiki articles by Claude Code.",
+      "type": "repo"
+    },
+    {
+      "title": "CES-Ltd/TitanClip — AI Company Orchestration Platform — Deploy governed teams of autonomous AI agents with Runtime Agentic IAM, credential vaults, heartbeat orchestration, and enterprise security. Built on Paperclip.",
+      "url": "https://github.com/CES-Ltd/TitanClip",
+      "source": "GitHub",
+      "date": "2026-04-04",
+      "excerpt": "AI Company Orchestration Platform — Deploy governed teams of autonomous AI agents with Runtime Agentic IAM, credential vaults, heartbeat orchestration, and enterprise security. Built on Paperclip.",
+      "type": "repo"
+    },
+    {
+      "title": "erickson-ivanowski/NaturalQuery — NL2SQL engine for .NET — convert natural language questions into SQL queries using LLMs",
+      "url": "https://github.com/erickson-ivanowski/NaturalQuery",
+      "source": "GitHub",
+      "date": "2026-04-04",
+      "excerpt": "NL2SQL engine for .NET — convert natural language questions into SQL queries using LLMs",
+      "type": "repo"
+    },
+    {
+      "title": "Gemma 4: Byte for byte, the most capable open models",
+      "url": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models/",
+      "source": "Google",
+      "date": "2026-04-02",
+      "excerpt": "Gemma 4: Our most intelligent open models to date, purpose-built for advanced reasoning and agentic workflows.",
+      "type": "article"
+    },
+    {
+      "title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable",
+      "url": "https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/",
+      "source": "Google",
+      "date": "2026-03-26",
+      "excerpt": "Our latest voice model has improved precision and lower latency to make voice interactions more fluid, natural and precise.",
+      "type": "article"
+    },
+    {
+      "title": "Protecting people from harmful manipulation",
+      "url": "https://deepmind.google/blog/protecting-people-from-harmful-manipulation/",
+      "source": "Google",
+      "date": "2026-03-25",
+      "excerpt": "Google DeepMind researches AI's harmful manipulation risks across areas like finance and health, leading to new safety measures.",
+      "type": "article"
+    },
+    {
+      "title": "Lyria 3 Pro: Create longer tracks in more",
+      "url": "https://deepmind.google/blog/lyria-3-pro-create-longer-tracks-in-more/",
+      "source": "Google",
+      "date": "2026-03-25",
+      "excerpt": "Introducing Lyria 3 Pro, which unlocks longer tracks with structural awareness. We’re also bringing Lyria to more Google products and surfaces.",
+      "type": "article"
+    },
+    {
+      "title": "Measuring progress toward AGI: A cognitive framework",
+      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework/",
+      "source": "Google",
+      "date": "2026-03-17",
+      "excerpt": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "type": "article"
+    }
+  ]
 }
