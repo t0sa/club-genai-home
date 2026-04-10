@@ -91,7 +91,12 @@ async function fetchRSS(url, source) {
     return items.slice(0, MAX_PER_SOURCE).map(item => {
       // Resolve URL: Atom uses <link href="..."/>, RSS 2.0 uses <link>text</link>.
       // guid may be a plain string or an object { '#text': '...', '@_isPermaLink': '...' }.
-      const rawLink = typeof item.link === 'object' ? item.link['@_href'] : item.link;
+      // When a feed has multiple <link> elements (e.g. HuggingFace Atom: rel=alternate + rel=self),
+      // fast-xml-parser returns an array. Pick rel="alternate" first, then fall back to [0].
+      const linkNode = Array.isArray(item.link)
+        ? (item.link.find(l => l['@_rel'] === 'alternate') ?? item.link[0])
+        : item.link;
+      const rawLink = typeof linkNode === 'object' ? linkNode['@_href'] : linkNode;
       const rawGuid = typeof item.guid === 'object' ? item.guid['#text'] : item.guid;
       const link = rawLink ?? rawGuid ?? '';
 
