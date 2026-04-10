@@ -11,6 +11,7 @@
 
 import { writeFileSync, renameSync } from 'fs';
 import { resolve } from 'path';
+import { fileURLToPath } from 'url';
 import { XMLParser } from 'fast-xml-parser';
 
 const OUTPUT_PATH      = resolve(process.cwd(), 'src/data/veille.json');
@@ -184,7 +185,9 @@ async function main() {
   console.log(`✅ Wrote ${items.length} items to ${OUTPUT_PATH}`);
 }
 
-main().catch(err => {
-  console.error('❌ fetch-veille failed:', err.message);
-  process.exit(1);
-});
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  main().catch(err => {
+    console.error('❌ fetch-veille failed:', err.message);
+    process.exit(1);
+  });
+}

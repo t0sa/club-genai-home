@@ -11,6 +11,7 @@
 
 import { writeFileSync, renameSync, readFileSync } from 'fs';
 import { resolve } from 'path';
+import { fileURLToPath } from 'url';
 
 const CONFIG       = JSON.parse(readFileSync(resolve(process.cwd(), 'src/data/config.json'), 'utf8'));
 const GITHUB_USER  = CONFIG.github_user;
@@ -84,7 +85,9 @@ async function main() {
   console.log(`✅ Wrote ${repos.length} repos to ${OUTPUT_PATH}`);
 }
 
-main().catch(err => {
-  console.error('❌ fetch-projects failed:', err.message);
-  process.exit(1);
-});
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  main().catch(err => {
+    console.error('❌ fetch-projects failed:', err.message);
+    process.exit(1);
+  });
+}
