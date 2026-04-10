@@ -16,14 +16,18 @@ import { XMLParser } from 'fast-xml-parser';
 
 const OUTPUT_PATH      = resolve(process.cwd(), 'src/data/veille.json');
 const MAX_PER_SOURCE   = 5;
-const MAX_TOTAL        = 15;
+const MAX_TOTAL        = 20;
 const FETCH_TIMEOUT_MS = 12_000;
 
 // RSS sources — Anthropic has no official RSS, others are official feeds
 const RSS_SOURCES = [
-  { url: 'https://openai.com/news/rss.xml',          source: 'OpenAI'  },
-  { url: 'https://deepmind.google/blog/rss.xml',     source: 'Google'  },
-  { url: 'https://research.facebook.com/feed',       source: 'Meta AI' },
+  { url: 'https://openai.com/news/rss.xml',                              source: 'OpenAI'       },
+  { url: 'https://deepmind.google/blog/rss.xml',                         source: 'Google'       },
+  { url: 'https://research.facebook.com/feed',                           source: 'Meta AI'      },
+  { url: 'https://huggingface.co/blog/feed.xml',                         source: 'Hugging Face' },
+  { url: 'https://blog.google/technology/ai/rss/',                       source: 'Google AI'    },
+  { url: 'https://blogs.nvidia.com/feed/',                               source: 'Nvidia'       },
+  { url: 'https://feeds.arstechnica.com/arstechnica/technology-lab',     source: 'Ars Technica' },
 ];
 
 // ── URL validation ───────────────────────────────────────────────────────────
@@ -125,7 +129,7 @@ async function fetchGitHubTrending() {
 
     const url =
       'https://api.github.com/search/repositories' +
-      `?q=topic:generative-ai+topic:llm+created:>${since}` +
+      `?q=topic:generative-ai+topic:llm+created:>${since}+stars:>50` +
       '&sort=stars&order=desc&per_page=5';
 
     const res = await fetch(url, {
