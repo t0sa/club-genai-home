@@ -16,7 +16,7 @@ import { XMLParser } from 'fast-xml-parser';
 
 const OUTPUT_PATH      = resolve(process.cwd(), 'src/data/veille.json');
 const MAX_PER_SOURCE   = 5;
-const MAX_TOTAL        = 20;
+const MAX_TOTAL        = 18;
 const FETCH_TIMEOUT_MS = 12_000;
 
 // RSS sources — Anthropic has no official RSS, others are official feeds
