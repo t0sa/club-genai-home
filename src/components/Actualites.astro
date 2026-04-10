@@ -8,14 +8,31 @@ interface Props {
 
 const { meetupUrl, meetupLabel, meetupDate, meetupLocation } = Astro.props;
 
-// If meetup_date is a valid YYYY-MM-DD string, format it as a French date.
-// Otherwise, display it as-is (supports free-text like "Mercredi 29 avril à 18h30").
+// Formats meetup_date for display:
+//   "2026-04-29T18:30" → "mercredi 29 avril 2026 à 18h30"
+//   "2026-04-29"       → "29 avril 2026"
+//   Free text          → displayed as-is
 let formattedDate: string | null = null;
 if (meetupDate) {
   try {
-    const d = new Date(meetupDate + 'T12:00:00');
+    const hasTime = meetupDate.includes('T') && meetupDate.length > 10;
+    // Append time only when not already present (avoids double-appending)
+    const parseStr = hasTime ? meetupDate : meetupDate + 'T12:00:00';
+    const d = new Date(parseStr);
     if (!Number.isNaN(d.getTime())) {
-      formattedDate = d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+      const datePart = d.toLocaleDateString('fr-FR', {
+        weekday: hasTime ? 'long' : undefined,
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      });
+      if (hasTime) {
+        const hh = String(d.getHours()).padStart(2, '0');
+        const mm = String(d.getMinutes()).padStart(2, '0');
+        formattedDate = `${datePart} à ${hh}h${mm}`;
+      } else {
+        formattedDate = datePart;
+      }
     } else {
       formattedDate = meetupDate;
     }
