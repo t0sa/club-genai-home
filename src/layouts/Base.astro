@@ -12,20 +12,24 @@ const {
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL('club-genai-dark.svg', canonicalURL).href;
-const meetupGroupUrl = config.meetup_url.replace(/\/events\/.*$/, '');
+// Guard: Astro.site is undefined if `site` is not configured in astro.config.mjs
+const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : null;
+// Anchor ogImage to site root + base path, not relative to canonicalURL's subpath
+const ogImage = Astro.site ? new URL(`${base}club-genai-dark.svg`, Astro.site).href : null;
 const githubUrl = `https://github.com/${config.github_user}`;
+const sameAs = [githubUrl, config.meetup_group_url].filter((u): u is string => Boolean(u) && u.startsWith('http'));
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Club GenAI Bordeaux',
-  url: canonicalURL.href,
+  url: canonicalURL?.href,
   description,
   logo: ogImage,
-  sameAs: [githubUrl, meetupGroupUrl],
+  sameAs,
 };
+// Escape </script> sequences to prevent premature script-tag termination in HTML
+const safeJsonLd = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
 ---
 <!doctype html>
 <html lang="fr">
@@ -53,15 +57,15 @@ const jsonLd = {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Canonical -->
-    <link rel="canonical" href={canonicalURL} />
+    {canonicalURL && <link rel="canonical" href={canonicalURL} />}
 
     <!-- Open Graph -->
     <meta property="og:type"        content="website" />
     <meta property="og:locale"      content="fr_FR" />
     <meta property="og:title"       content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url"         content={canonicalURL} />
-    <meta property="og:image"       content={ogImage} />
+    {canonicalURL && <meta property="og:url"   content={canonicalURL} />}
+    {ogImage      && <meta property="og:image" content={ogImage} />}
 
     <!-- Twitter Card -->
     <meta name="twitter:card"        content="summary_large_image" />
@@ -69,7 +73,7 @@ const jsonLd = {
     <meta name="twitter:description" content={description} />
 
     <!-- JSON-LD Organization -->
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" set:html={safeJsonLd} />
 
     <!-- Google Fonts — non-render-blocking -->
     <link
