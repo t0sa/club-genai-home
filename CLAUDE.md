@@ -110,6 +110,30 @@ await page.evaluate(() => {
 
 Note : `localStorage` est scopé à l'origine (`t0sa.github.io`). Toute modification est persistée pour les navigations suivantes sur le même origin.
 
+## Palette de couleurs (`tailwind.config.mjs`)
+
+### Light theme
+| Token Tailwind | Hex | Usage |
+|---|---|---|
+| `cream` | `#faf9f5` | Fond principal |
+| `cream-card` | `#f0ede6` | Fond des cards |
+| `charcoal` | `#141413` | Texte principal |
+| `stone` | `#b0aea5` | Texte secondaire / muted |
+| `sand` | `#e8e6dc` | Bordures / séparateurs |
+| `terracotta` | `#d97757` | Accent / CTA |
+| `terracotta-dark` | `#b85c3a` | Accent au hover |
+
+### Dark theme
+| Token Tailwind | Hex | Usage |
+|---|---|---|
+| `dark-bg` | `#141210` | Fond principal |
+| `dark-card` | `#1e1c18` | Fond des cards |
+| `dark-text` | `#f0ede6` | Texte principal |
+| `dark-muted` | `#8a8580` | Texte secondaire / muted |
+| `dark-border` | `#2d2b26` | Bordures / séparateurs |
+
+L'accent `terracotta` / `terracotta-dark` est partagé entre les deux thèmes.
+
 ## Données documentées
 
 - `docs/solutions/` — solutions aux problèmes rencontrés, avec frontmatter YAML pour la recherche
