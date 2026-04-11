@@ -9,7 +9,7 @@
  * GITHUB_TOKEN env var is optional but recommended.
  */
 
-import { writeFileSync, renameSync } from 'fs';
+import { writeFileSync, renameSync, readFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
 import { XMLParser } from 'fast-xml-parser';
@@ -182,7 +182,19 @@ async function main() {
   };
 
   if (items.length === 0) {
-    console.warn('⚠️  No veille items fetched from any source — skipping write to preserve existing data.');
+    try {
+      const existing = JSON.parse(readFileSync(OUTPUT_PATH, 'utf-8'));
+      const content = JSON.stringify({
+        updated_at: new Date().toISOString().split('T')[0],
+        items: existing.items ?? [],
+      }, null, 2) + '\n';
+      const tmpPath = OUTPUT_PATH + '.tmp';
+      writeFileSync(tmpPath, content);
+      renameSync(tmpPath, OUTPUT_PATH);
+      console.warn(`⚠️  No new items fetched — updated_at refreshed, ${existing.items?.length ?? 0} existing items preserved.`);
+    } catch {
+      console.warn('⚠️  No veille items fetched and no existing data to preserve — skipping write.');
+    }
     return;
   }
 
