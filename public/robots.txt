@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://t0sa.github.io/club-genai-home/sitemap-index.xml

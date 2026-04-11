@@ -10,9 +10,9 @@ const base = import.meta.env.BASE_URL;
 <nav class="sticky top-0 z-50 border-b border-sand bg-cream/95 backdrop-blur-sm dark:border-dark-border dark:bg-dark-bg/95">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
 
-    <a href={base} class="flex items-center gap-2 text-lg font-semibold text-charcoal hover:text-terracotta transition-colors dark:text-dark-text">
-      <img src={`${base}club-genai-dark.svg`}  alt="Club GenAI logo" class="h-10 w-10 dark:hidden" />
-      <img src={`${base}club-genai-light.svg`} alt="Club GenAI logo" class="h-10 w-10 hidden dark:block" />
+    <a href={base} aria-label="Club GenAI" class="flex items-center gap-2 text-lg font-semibold text-charcoal hover:text-terracotta transition-colors dark:text-dark-text">
+      <img src={`${base}club-genai-dark.svg`}  alt="" width="40" height="40" class="h-10 w-10 dark:hidden" />
+      <img src={`${base}club-genai-light.svg`} alt="" width="40" height="40" class="h-10 w-10 hidden dark:block" />
       Club GenAI
     </a>
 
@@ -46,12 +46,13 @@ const base = import.meta.env.BASE_URL;
   class="fixed inset-0 z-40 bg-charcoal/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200"
 ></div>
 
-<!-- Side drawer -->
+<!-- Side drawer — inert when closed to remove from tab order and accessibility tree -->
 <div
   id="nav-drawer"
   role="dialog"
   aria-modal="true"
   aria-label="Menu de navigation"
+  inert
   class="fixed inset-y-0 right-0 z-50 w-72 bg-cream dark:bg-dark-bg border-l border-sand dark:border-dark-border shadow-xl translate-x-full transition-transform duration-200 ease-in-out flex flex-col"
 >
   <!-- Drawer header -->
@@ -110,6 +111,7 @@ const base = import.meta.env.BASE_URL;
   const closeIcon = document.getElementById('icon-close')!;
 
   let outsideClickHandler: ((e: MouseEvent) => void) | null = null;
+  let focusTrapHandler: ((e: KeyboardEvent) => void) | null = null;
 
   function handleEscape(e: KeyboardEvent) {
     if (e.key === 'Escape') closeMenu();
@@ -117,6 +119,7 @@ const base = import.meta.env.BASE_URL;
 
   function closeMenu() {
     drawer.classList.add('translate-x-full');
+    drawer.setAttribute('inert', '');
     backdrop.classList.add('opacity-0', 'pointer-events-none');
     backdrop.classList.remove('opacity-100');
     openIcon.classList.remove('hidden');
@@ -127,24 +130,58 @@ const base = import.meta.env.BASE_URL;
       document.removeEventListener('click', outsideClickHandler);
       outsideClickHandler = null;
     }
+    if (focusTrapHandler) {
+      document.removeEventListener('keydown', focusTrapHandler);
+      focusTrapHandler = null;
+    }
     document.removeEventListener('keydown', handleEscape);
+    // Return focus to the trigger button
+    btn.focus();
   }
 
   function openMenu() {
+    // Idempotency guard — prevent double-open listener leak
+    if (outsideClickHandler !== null) return;
+
     drawer.classList.remove('translate-x-full');
+    drawer.removeAttribute('inert');
     backdrop.classList.remove('opacity-0', 'pointer-events-none');
     backdrop.classList.add('opacity-100');
     openIcon.classList.add('hidden');
     closeIcon.classList.remove('hidden');
     btn.setAttribute('aria-expanded', 'true');
     btn.setAttribute('aria-label', btn.dataset.labelClose!);
-    outsideClickHandler = (e: MouseEvent) => {
-      if (!drawer.contains(e.target as Node) && !btn.contains(e.target as Node)) {
-        closeMenu();
+
+    // Move focus into the drawer
+    const firstFocusable = drawer.querySelector<HTMLElement>('button, a');
+    firstFocusable?.focus();
+
+    // Focus trap — cycle through focusable elements inside the drawer
+    const focusableSelector = 'button:not([disabled]), a[href]';
+    focusTrapHandler = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      const focusables = Array.from(drawer.querySelectorAll<HTMLElement>(focusableSelector));
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last  = focusables[focusables.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
       }
     };
-    document.addEventListener('click', outsideClickHandler);
+    document.addEventListener('keydown', focusTrapHandler);
     document.addEventListener('keydown', handleEscape);
+
+    // Defer outside-click listener to avoid catching the opening click in the same bubble
+    requestAnimationFrame(() => {
+      outsideClickHandler = (e: MouseEvent) => {
+        if (!drawer.contains(e.target as Node) && !btn.contains(e.target as Node)) {
+          closeMenu();
+        }
+      };
+      document.addEventListener('click', outsideClickHandler);
+    });
   }
 
   btn.addEventListener('click', () => {
@@ -152,7 +189,6 @@ const base = import.meta.env.BASE_URL;
   });
 
   closeBtn.addEventListener('click', closeMenu);
-  backdrop.addEventListener('click', closeMenu);
 
   // Ferme le drawer au clic sur un lien ancre
   drawer.querySelectorAll('a[href^="#"]').forEach(link => {
