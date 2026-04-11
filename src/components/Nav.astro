@@ -11,12 +11,13 @@ const { meetupUrl, githubUser } = Astro.props;
   <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
 
     <a href={import.meta.env.BASE_URL} class="flex items-center gap-2 text-lg font-semibold text-charcoal hover:text-terracotta transition-colors dark:text-dark-text">
-      <img src={`${import.meta.env.BASE_URL}club-genai-dark.svg`}       alt="Club GenAI logo" class="h-10 w-10 dark:hidden" />
+      <img src={`${import.meta.env.BASE_URL}club-genai-dark.svg`}  alt="Club GenAI logo" class="h-10 w-10 dark:hidden" />
       <img src={`${import.meta.env.BASE_URL}club-genai-light.svg`} alt="Club GenAI logo" class="h-10 w-10 hidden dark:block" />
       Club GenAI
     </a>
 
-    <div class="flex items-center gap-6">
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-6">
       <a href="#projets" class="text-sm text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text">Projets</a>
       <a href="#veille"  class="text-sm text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text">Veille</a>
 
@@ -47,5 +48,82 @@ const { meetupUrl, githubUser } = Astro.props;
       </a>
     </div>
 
+    <!-- Mobile: theme toggle + hamburger -->
+    <div class="flex md:hidden items-center gap-3">
+      <ThemeToggle />
+      <button
+        id="nav-hamburger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="nav-mobile-menu"
+        class="text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text"
+      >
+        <svg id="icon-open"  xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="nav-mobile-menu"
+    class="hidden md:hidden border-t border-sand dark:border-dark-border"
+  >
+    <div class="flex flex-col px-6 py-4 gap-4">
+      <a href="#projets" class="text-sm text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text">Projets</a>
+      <a href="#veille"  class="text-sm text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text">Veille</a>
+      <a
+        href={meetupUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 text-sm text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.24 12.49a2.43 2.43 0 0 0-1.95-2.39 2.44 2.44 0 0 0-.47-2.68 2.43 2.43 0 0 0-2.68-.46 2.43 2.43 0 0 0-4.27 0 2.43 2.43 0 0 0-3.15 3.14 2.44 2.44 0 0 0 .05 4.27 2.43 2.43 0 0 0 3.13 3.13 2.43 2.43 0 0 0 4.27 0 2.44 2.44 0 0 0 3.14-3.14 2.44 2.44 0 0 0 1.93-1.87zm-7.24 3.42a3.9 3.9 0 1 1 0-7.81 3.9 3.9 0 0 1 0 7.81z"/>
+        </svg>
+        Meetup
+      </a>
+      <a
+        href={`https://github.com/${githubUser}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 text-sm text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
   </div>
 </nav>
+
+<script>
+  const btn   = document.getElementById('nav-hamburger')!;
+  const menu  = document.getElementById('nav-mobile-menu')!;
+  const open  = document.getElementById('icon-open')!;
+  const close = document.getElementById('icon-close')!;
+
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    menu.classList.toggle('hidden');
+    open.classList.toggle('hidden');
+    close.classList.toggle('hidden');
+  });
+
+  // Ferme le menu au clic sur un lien interne
+  menu.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      open.classList.remove('hidden');
+      close.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
