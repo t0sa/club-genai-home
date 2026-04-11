@@ -1,0 +1,29 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" class="w-[85%] h-auto" data-fg-d3bl19="0.8:1.4094:/src/app/App.tsx:58:15:2909:48:e:Logo::::::BpG5" data-fgid-d3bl19=":rf:" data-fg-dmg0="1.11:1.1920:/src/app/components/Logo.tsx:7:5:231:1651:e:svg:ete" data-fgid-dmg0=":rg:"><defs data-fg-dmg1="1.11:1.1920:/src/app/components/Logo.tsx:15:7:398:886:e:defs:e"><style data-fg-dmg2="1.11:1.1920:/src/app/components/Logo.tsx:16:9:413:857:e:style:s">
+            @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&amp;display=swap');
+            
+            .logo-text {
+              font-family: 'Oleo Script', cursive;
+              font-weight: 700;
+              text-anchor: middle;
+              paint-order: stroke fill;
+              stroke-linejoin: round;
+              stroke-linecap: round;
+            }
+            
+            .shadow {
+              fill: #5a6b9c;
+              stroke: #5a6b9c;
+              stroke-width: 16px;
+            }
+            
+            .main {
+              fill: #ffffff;
+              stroke: #c29b4b;
+              stroke-width: 16px;
+            }
+            
+            .logo-group {
+              transform: rotate(-10deg);
+              transform-origin: 50% 50%;
+            }
+          </style></defs><g class="logo-group" data-fg-dmg4="1.11:1.1920:/src/app/components/Logo.tsx:49:7:1292:579:e:g:xtetetxtete"><text x="425" y="185" font-size="190" dominant-baseline="middle" class="logo-text shadow" data-fg-dmg6="1.11:1.1920:/src/app/components/Logo.tsx:51:9:1390:103:e:text:t">Club</text><text x="385" y="345" font-size="190" dominant-baseline="middle" class="logo-text shadow" data-fg-dmg8="1.11:1.1920:/src/app/components/Logo.tsx:52:9:1502:104:e:text:t">GenAI</text><text x="410" y="170" font-size="190" dominant-baseline="middle" class="logo-text main" data-fg-dmg11="1.11:1.1920:/src/app/components/Logo.tsx:55:9:1648:101:e:text:t">Club</text><text x="370" y="330" font-size="190" dominant-baseline="middle" class="logo-text main" data-fg-dmg13="1.11:1.1920:/src/app/components/Logo.tsx:56:9:1758:102:e:text:t">GenAI</text></g></svg>
