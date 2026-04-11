@@ -136,5 +136,5 @@ L'accent `terracotta` / `terracotta-dark` est partagé entre les deux thèmes.
 
 ## Données documentées
 
-- `docs/solutions/` — solutions aux problèmes rencontrés, avec frontmatter YAML pour la recherche
+- `docs/solutions/` — solutions aux problèmes rencontrés, organisées par catégorie (`runtime-errors/`, `best-practices/`, `ui-bugs/`, `security-issues/`…), avec frontmatter YAML searchable (`module`, `tags`, `problem_type`). Pertinent lors d'une implémentation ou d'un débogage dans une zone documentée.
 - `docs/plans/` — plans d'implémentation actifs et archivés
