@@ -3,16 +3,16 @@ import ThemeToggle from './ThemeToggle.astro';
 
 interface Props {
   meetupUrl: string;
-  githubUser: string;
 }
-const { meetupUrl, githubUser } = Astro.props;
+const { meetupUrl } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 <nav class="sticky top-0 z-50 border-b border-sand bg-cream/95 backdrop-blur-sm dark:border-dark-border dark:bg-dark-bg/95">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
 
-    <a href={import.meta.env.BASE_URL} class="flex items-center gap-2 text-lg font-semibold text-charcoal hover:text-terracotta transition-colors dark:text-dark-text">
-      <img src={`${import.meta.env.BASE_URL}club-genai-dark.svg`}  alt="Club GenAI logo" class="h-10 w-10 dark:hidden" />
-      <img src={`${import.meta.env.BASE_URL}club-genai-light.svg`} alt="Club GenAI logo" class="h-10 w-10 hidden dark:block" />
+    <a href={base} class="flex items-center gap-2 text-lg font-semibold text-charcoal hover:text-terracotta transition-colors dark:text-dark-text">
+      <img src={`${base}club-genai-dark.svg`}  alt="Club GenAI logo" class="h-10 w-10 dark:hidden" />
+      <img src={`${base}club-genai-light.svg`} alt="Club GenAI logo" class="h-10 w-10 hidden dark:block" />
       Club GenAI
     </a>
 
@@ -21,8 +21,10 @@ const { meetupUrl, githubUser } = Astro.props;
       <button
         id="nav-hamburger"
         aria-label="Ouvrir le menu"
+        data-label-open="Ouvrir le menu"
+        data-label-close="Fermer le menu"
         aria-expanded="false"
-        aria-controls="nav-mobile-menu"
+        aria-controls="nav-drawer"
         class="text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text"
       >
         <svg id="icon-open"  xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -35,83 +37,124 @@ const { meetupUrl, githubUser } = Astro.props;
     </div>
 
   </div>
-
-  <!-- Dropdown menu -->
-  <div
-    id="nav-mobile-menu"
-    class="hidden border-t border-sand dark:border-dark-border"
-  >
-    <div class="mx-auto max-w-6xl flex flex-col px-6 py-4 gap-1">
-
-      <!-- Projets + GitHub -->
-      <div class="flex items-center justify-between">
-        <a href="#projets" class="flex items-center gap-3 py-2 text-sm text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text">
-          <!-- Folder icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" />
-          </svg>
-          Projets
-        </a>
-        <a
-          href={`https://github.com/${githubUser}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          class="p-1 text-stone hover:text-terracotta transition-colors dark:text-dark-muted"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Veille -->
-      <a href="#veille" class="flex items-center gap-3 py-2 text-sm text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text">
-        <!-- Book icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-        Veille
-      </a>
-
-      <!-- Meetup -->
-      <a
-        href={meetupUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="flex items-center gap-3 py-2 text-sm text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19.24 12.49a2.43 2.43 0 0 0-1.95-2.39 2.44 2.44 0 0 0-.47-2.68 2.43 2.43 0 0 0-2.68-.46 2.43 2.43 0 0 0-4.27 0 2.43 2.43 0 0 0-3.15 3.14 2.44 2.44 0 0 0 .05 4.27 2.43 2.43 0 0 0 3.13 3.13 2.43 2.43 0 0 0 4.27 0 2.44 2.44 0 0 0 3.14-3.14 2.44 2.44 0 0 0 1.93-1.87zm-7.24 3.42a3.9 3.9 0 1 1 0-7.81 3.9 3.9 0 0 1 0 7.81z"/>
-        </svg>
-        Meetup
-      </a>
-
-    </div>
-  </div>
 </nav>
 
+<!-- Backdrop -->
+<div
+  id="nav-backdrop"
+  class="fixed inset-0 z-40 bg-charcoal/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200"
+></div>
+
+<!-- Side drawer -->
+<div
+  id="nav-drawer"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Menu de navigation"
+  class="fixed inset-y-0 right-0 z-50 w-72 bg-cream dark:bg-dark-bg border-l border-sand dark:border-dark-border shadow-xl translate-x-full transition-transform duration-200 ease-in-out flex flex-col"
+>
+  <!-- Drawer header -->
+  <div class="flex items-center justify-between px-6 py-4 border-b border-sand dark:border-dark-border">
+    <span class="text-sm font-semibold text-charcoal dark:text-dark-text">Menu</span>
+    <button
+      id="nav-drawer-close"
+      aria-label="Fermer le menu"
+      class="text-stone hover:text-charcoal transition-colors dark:text-dark-muted dark:hover:text-dark-text"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Drawer links -->
+  <nav class="flex flex-col px-4 py-4 gap-1">
+
+    <!-- Projets -->
+    <a href="#projets" class="flex items-center gap-3 px-3 py-3 rounded-lg text-sm text-stone hover:text-charcoal hover:bg-sand/60 transition-colors dark:text-dark-muted dark:hover:text-dark-text dark:hover:bg-dark-card">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+      </svg>
+      Projets
+    </a>
+
+    <!-- Veille -->
+    <a href="#veille" class="flex items-center gap-3 px-3 py-3 rounded-lg text-sm text-stone hover:text-charcoal hover:bg-sand/60 transition-colors dark:text-dark-muted dark:hover:text-dark-text dark:hover:bg-dark-card">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+      Veille
+    </a>
+
+    <!-- Meetup -->
+    <a
+      href={meetupUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-3 px-3 py-3 rounded-lg text-sm text-stone hover:text-charcoal hover:bg-sand/60 transition-colors dark:text-dark-muted dark:hover:text-dark-text dark:hover:bg-dark-card"
+    >
+      <img src={`${base}meetup-logo.svg`} alt="" aria-hidden="true" class="h-5 w-5 shrink-0 rounded" />
+      Meetup
+    </a>
+
+  </nav>
+</div>
+
 <script>
-  const btn   = document.getElementById('nav-hamburger')!;
-  const menu  = document.getElementById('nav-mobile-menu')!;
-  const open  = document.getElementById('icon-open')!;
-  const close = document.getElementById('icon-close')!;
+  const btn      = document.getElementById('nav-hamburger')!;
+  const drawer   = document.getElementById('nav-drawer')!;
+  const backdrop = document.getElementById('nav-backdrop')!;
+  const closeBtn = document.getElementById('nav-drawer-close')!;
+  const openIcon = document.getElementById('icon-open')!;
+  const closeIcon = document.getElementById('icon-close')!;
+
+  let outsideClickHandler: ((e: MouseEvent) => void) | null = null;
+
+  function handleEscape(e: KeyboardEvent) {
+    if (e.key === 'Escape') closeMenu();
+  }
+
+  function closeMenu() {
+    drawer.classList.add('translate-x-full');
+    backdrop.classList.add('opacity-0', 'pointer-events-none');
+    backdrop.classList.remove('opacity-100');
+    openIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', btn.dataset.labelOpen!);
+    if (outsideClickHandler) {
+      document.removeEventListener('click', outsideClickHandler);
+      outsideClickHandler = null;
+    }
+    document.removeEventListener('keydown', handleEscape);
+  }
+
+  function openMenu() {
+    drawer.classList.remove('translate-x-full');
+    backdrop.classList.remove('opacity-0', 'pointer-events-none');
+    backdrop.classList.add('opacity-100');
+    openIcon.classList.add('hidden');
+    closeIcon.classList.remove('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.setAttribute('aria-label', btn.dataset.labelClose!);
+    outsideClickHandler = (e: MouseEvent) => {
+      if (!drawer.contains(e.target as Node) && !btn.contains(e.target as Node)) {
+        closeMenu();
+      }
+    };
+    document.addEventListener('click', outsideClickHandler);
+    document.addEventListener('keydown', handleEscape);
+  }
 
   btn.addEventListener('click', () => {
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!expanded));
-    menu.classList.toggle('hidden');
-    open.classList.toggle('hidden');
-    close.classList.toggle('hidden');
+    btn.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
   });
 
-  // Ferme le menu au clic sur un lien ancre
-  menu.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.add('hidden');
-      open.classList.remove('hidden');
-      close.classList.add('hidden');
-      btn.setAttribute('aria-expanded', 'false');
-    });
+  closeBtn.addEventListener('click', closeMenu);
+  backdrop.addEventListener('click', closeMenu);
+
+  // Ferme le drawer au clic sur un lien ancre
+  drawer.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', closeMenu);
   });
 </script>
