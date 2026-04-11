@@ -10,7 +10,9 @@ const { meetupUrl, githubUser } = Astro.props;
 <nav class="sticky top-0 z-50 border-b border-sand bg-cream/95 backdrop-blur-sm dark:border-dark-border dark:bg-dark-bg/95">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
 
-    <a href={import.meta.env.BASE_URL} class="text-lg font-semibold text-charcoal hover:text-terracotta transition-colors dark:text-dark-text">
+    <a href={import.meta.env.BASE_URL} class="flex items-center gap-2 text-lg font-semibold text-charcoal hover:text-terracotta transition-colors dark:text-dark-text">
+      <img src={`${import.meta.env.BASE_URL}club-genai-dark.svg`}       alt="Club GenAI logo" class="h-8 w-8 dark:hidden" />
+      <img src={`${import.meta.env.BASE_URL}club-genai-light.svg`} alt="Club GenAI logo" class="h-8 w-8 hidden dark:block" />
       Club GenAI
     </a>
 
