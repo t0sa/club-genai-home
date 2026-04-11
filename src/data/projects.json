@@ -1,9 +1,17 @@
 {
-  "updated_at": "2026-04-10",
+  "updated_at": "2026-04-11",
   "repos": [
     {
+      "name": "club-genai-skills",
+      "description": "skills, agents & hooks · configurer et optimiser vos assistants IA",
+      "url": "https://github.com/t0sa/club-genai-skills",
+      "stars": 0,
+      "updated_at": "2026-04-10",
+      "topics": []
+    },
+    {
       "name": "club-genai-home",
-      "description": "",
+      "description": "Site vitrine du Club GenAI Bordeaux · communauté IA générative · meetups, projets & veille GenAI",
       "url": "https://github.com/t0sa/club-genai-home",
       "stars": 0,
       "updated_at": "2026-04-10",
@@ -11,10 +19,10 @@
     },
     {
       "name": "club-genai-mcp",
-      "description": "",
+      "description": "Workshop MCP · théorie + pratique : GitHub MCP, création d'un serveur, Playwright & Nuxt pour visualiser la session",
       "url": "https://github.com/t0sa/club-genai-mcp",
       "stars": 0,
-      "updated_at": "2026-03-19",
+      "updated_at": "2026-04-10",
       "topics": []
     }
   ]
