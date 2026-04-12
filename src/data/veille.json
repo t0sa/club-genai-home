@@ -1,44 +1,44 @@
 {
-  "updated_at": "2026-04-11",
+  "updated_at": "2026-04-12",
   "items": [
     {
-      "title": "Using custom GPTs",
-      "url": "https://openai.com/academy/custom-gpts",
+      "title": "Getting started with ChatGPT",
+      "url": "https://openai.com/academy/getting-started",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how to build and use custom GPTs to automate workflows, maintain consistent outputs, and create purpose-built AI assistants.",
+      "excerpt": "Learn how to use ChatGPT, start your first conversation, and discover simple ways to write, brainstorm, and solve problems with AI.",
       "type": "article"
     },
     {
-      "title": "ChatGPT for customer success teams",
-      "url": "https://openai.com/academy/customer-success",
+      "title": "Brainstorming with ChatGPT",
+      "url": "https://openai.com/academy/brainstorming",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how customer success teams use ChatGPT to manage accounts, improve communication, reduce churn, and drive adoption and renewals.",
+      "excerpt": "Learn how to use ChatGPT to brainstorm ideas, organize thinking, and turn rough concepts into structured, actionable plans.",
       "type": "article"
     },
     {
-      "title": "Applications of AI at OpenAI",
-      "url": "https://openai.com/academy/applications-of-ai",
+      "title": "Writing with ChatGPT",
+      "url": "https://openai.com/academy/writing",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Explore how OpenAI products like ChatGPT, Codex, and APIs bring AI into real-world use for work, development, and everyday tasks.",
+      "excerpt": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
       "type": "article"
     },
     {
-      "title": "Research with ChatGPT",
-      "url": "https://openai.com/academy/search-and-deep-research",
+      "title": "ChatGPT for research",
+      "url": "https://openai.com/academy/research",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how to research with ChatGPT using search and deep research to find up-to-date information, analyze sources, and generate structured insights.",
+      "excerpt": "Learn how to use ChatGPT for research to gather sources, analyze information, and create structured, citation-backed insights.",
       "type": "article"
     },
     {
-      "title": "Analyzing data with ChatGPT",
-      "url": "https://openai.com/academy/data-analysis",
+      "title": "Responsible and safe use of AI",
+      "url": "https://openai.com/academy/responsible-and-safe-use",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how to analyze data with ChatGPT by exploring datasets, generating insights, creating visualizations, and turning findings into actionable decisions.",
+      "excerpt": "Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT.",
       "type": "article"
     },
     {
