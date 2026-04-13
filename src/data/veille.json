@@ -1,44 +1,44 @@
 {
-  "updated_at": "2026-04-12",
+  "updated_at": "2026-04-13",
   "items": [
     {
-      "title": "Getting started with ChatGPT",
-      "url": "https://openai.com/academy/getting-started",
+      "title": "Using projects in ChatGPT",
+      "url": "https://openai.com/academy/projects",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how to use ChatGPT, start your first conversation, and discover simple ways to write, brainstorm, and solve problems with AI.",
+      "excerpt": "Learn how to use orojects in ChatGPT to organize chats, files, and instructions, manage ongoing work, and collaborate more effectively.",
       "type": "article"
     },
     {
-      "title": "Brainstorming with ChatGPT",
-      "url": "https://openai.com/academy/brainstorming",
+      "title": "ChatGPT for marketing teams",
+      "url": "https://openai.com/academy/marketing",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how to use ChatGPT to brainstorm ideas, organize thinking, and turn rough concepts into structured, actionable plans.",
+      "excerpt": "Learn how marketing teams use ChatGPT to plan campaigns, generate content, analyze performance, and move from ideas to execution faster.",
       "type": "article"
     },
     {
-      "title": "Writing with ChatGPT",
-      "url": "https://openai.com/academy/writing",
+      "title": "Our response to the Axios developer tool compromise",
+      "url": "https://openai.com/index/axios-developer-tool-compromise",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
+      "excerpt": "OpenAI responds to the Axios supply chain attack by rotating macOS code signing certificates, updating apps, and confirming no user data was compromised.",
       "type": "article"
     },
     {
-      "title": "ChatGPT for research",
-      "url": "https://openai.com/academy/research",
+      "title": "Using custom GPTs",
+      "url": "https://openai.com/academy/custom-gpts",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how to use ChatGPT for research to gather sources, analyze information, and create structured, citation-backed insights.",
+      "excerpt": "Learn how to build and use custom GPTs to automate workflows, maintain consistent outputs, and create purpose-built AI assistants.",
       "type": "article"
     },
     {
-      "title": "Responsible and safe use of AI",
-      "url": "https://openai.com/academy/responsible-and-safe-use",
+      "title": "Analyzing data with ChatGPT",
+      "url": "https://openai.com/academy/data-analysis",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT.",
+      "excerpt": "Learn how to analyze data with ChatGPT by exploring datasets, generating insights, creating visualizations, and turning findings into actionable decisions.",
       "type": "article"
     },
     {
