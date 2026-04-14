@@ -1,44 +1,44 @@
 {
-  "updated_at": "2026-04-13",
+  "updated_at": "2026-04-14",
   "items": [
     {
-      "title": "Using projects in ChatGPT",
-      "url": "https://openai.com/academy/projects",
+      "title": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
+      "url": "https://openai.com/index/cloudflare-openai-agent-cloud",
       "source": "OpenAI",
-      "date": "2026-04-10",
-      "excerpt": "Learn how to use orojects in ChatGPT to organize chats, files, and instructions, manage ongoing work, and collaborate more effectively.",
+      "date": "2026-04-13",
+      "excerpt": "Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with speed and security.",
       "type": "article"
     },
     {
-      "title": "ChatGPT for marketing teams",
-      "url": "https://openai.com/academy/marketing",
+      "title": "ChatGPT for operations teams",
+      "url": "https://openai.com/academy/operations",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how marketing teams use ChatGPT to plan campaigns, generate content, analyze performance, and move from ideas to execution faster.",
+      "excerpt": "Learn how operations teams use ChatGPT to streamline workflows, improve coordination, standardize processes, and drive faster execution.",
       "type": "article"
     },
     {
-      "title": "Our response to the Axios developer tool compromise",
-      "url": "https://openai.com/index/axios-developer-tool-compromise",
+      "title": "Applications of AI at OpenAI",
+      "url": "https://openai.com/academy/applications-of-ai",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "OpenAI responds to the Axios supply chain attack by rotating macOS code signing certificates, updating apps, and confirming no user data was compromised.",
+      "excerpt": "Explore how OpenAI products like ChatGPT, Codex, and APIs bring AI into real-world use for work, development, and everyday tasks.",
       "type": "article"
     },
     {
-      "title": "Using custom GPTs",
-      "url": "https://openai.com/academy/custom-gpts",
+      "title": "ChatGPT for finance teams",
+      "url": "https://openai.com/academy/finance",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how to build and use custom GPTs to automate workflows, maintain consistent outputs, and create purpose-built AI assistants.",
+      "excerpt": "Learn how finance teams use ChatGPT to streamline reporting, analyze data, improve forecasts, and communicate insights more clearly.",
       "type": "article"
     },
     {
-      "title": "Analyzing data with ChatGPT",
-      "url": "https://openai.com/academy/data-analysis",
+      "title": "Brainstorming with ChatGPT",
+      "url": "https://openai.com/academy/brainstorming",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how to analyze data with ChatGPT by exploring datasets, generating insights, creating visualizations, and turning findings into actionable decisions.",
+      "excerpt": "Learn how to use ChatGPT to brainstorm ideas, organize thinking, and turn rough concepts into structured, actionable plans.",
       "type": "article"
     },
     {
@@ -90,14 +90,6 @@
       "type": "article"
     },
     {
-      "title": "joyehuang/Learn-Open-Harness — 🤖 Official Interactive Tutorial for OpenHarness – Zero to Hero in 12 Chapters | Learn OpenHarness like Claude Code: Agent Loop, Tools, Memory, Multi-Agent | 面向零基础的 AI Agent 交互式教程",
-      "url": "https://github.com/joyehuang/Learn-Open-Harness",
-      "source": "GitHub",
-      "date": "2026-04-07",
-      "excerpt": "🤖 Official Interactive Tutorial for OpenHarness – Zero to Hero in 12 Chapters | Learn OpenHarness like Claude Code: Agent Loop, Tools, Memory, Multi-Agent | 面向零基础的 AI Agent 交互式教程",
-      "type": "repo"
-    },
-    {
       "title": "Gemma 4: Byte for byte, the most capable open models",
       "url": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models/",
       "source": "Google",
@@ -143,6 +135,14 @@
       "source": "Nvidia",
       "date": "2026-04-02",
       "excerpt": "No joke — GFN Thursday is skipping the tricks and heading straight into the games. April kicks off with ten new titles, bringing fresh adventures to GeForce NOW, including the launch of Capcom’s highl",
+      "type": "article"
+    },
+    {
+      "title": "We’re creating a new satellite imagery map to help protect Brazil’s forests.",
+      "url": "https://blog.google/products-and-platforms/products/earth/satellite-imagery-brazilian-deforestation/",
+      "source": "Google AI",
+      "date": "2026-04-01",
+      "excerpt": "Google partnered with the Brazilian government on a satellite imagery map to help protect the country’s forests.",
       "type": "article"
     }
   ]

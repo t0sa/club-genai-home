@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-04-13",
+  "updated_at": "2026-04-14",
   "repos": [
-    {
-      "name": "club-genai-home",
-      "description": "Site vitrine du Club GenAI Bordeaux · communauté IA générative · meetups, projets & veille GenAI",
-      "url": "https://github.com/t0sa/club-genai-home",
-      "stars": 0,
-      "updated_at": "2026-04-12",
-      "topics": []
-    },
     {
       "name": "club-genai-skills",
       "description": "skills, agents & hooks · configurer et optimiser vos assistants IA",
       "url": "https://github.com/t0sa/club-genai-skills",
       "stars": 0,
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-04-13",
+      "topics": []
+    },
+    {
+      "name": "club-genai-home",
+      "description": "Site vitrine du Club GenAI Bordeaux · communauté IA générative · meetups, projets & veille GenAI",
+      "url": "https://github.com/t0sa/club-genai-home",
+      "stars": 0,
+      "updated_at": "2026-04-13",
       "topics": []
     },
     {
