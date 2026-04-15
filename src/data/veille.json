@@ -1,6 +1,30 @@
 {
-  "updated_at": "2026-04-14",
+  "updated_at": "2026-04-15",
   "items": [
+    {
+      "title": "Trusted access for the next era of cyber defense",
+      "url": "https://openai.com/index/scaling-trusted-access-for-cyber-defense",
+      "source": "OpenAI",
+      "date": "2026-04-14",
+      "excerpt": "OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and strengthening safeguards as AI cybersecurity capabilities advance.",
+      "type": "article"
+    },
+    {
+      "title": "Turn your best AI prompts into one-click tools in Chrome",
+      "url": "https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/",
+      "source": "Google AI",
+      "date": "2026-04-14",
+      "excerpt": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
+      "type": "article"
+    },
+    {
+      "title": "Bringing people together at AI for the Economy Forum",
+      "url": "https://blog.google/company-news/outreach-and-initiatives/creating-opportunity/ai-economy-forum/",
+      "source": "Google AI",
+      "date": "2026-04-14",
+      "excerpt": "Google is bringing people together in Washington D.C. at our AI for the Economy Forum.",
+      "type": "article"
+    },
     {
       "title": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
       "url": "https://openai.com/index/cloudflare-openai-agent-cloud",
@@ -10,19 +34,11 @@
       "type": "article"
     },
     {
-      "title": "ChatGPT for operations teams",
-      "url": "https://openai.com/academy/operations",
-      "source": "OpenAI",
-      "date": "2026-04-10",
-      "excerpt": "Learn how operations teams use ChatGPT to streamline workflows, improve coordination, standardize processes, and drive faster execution.",
-      "type": "article"
-    },
-    {
-      "title": "Applications of AI at OpenAI",
-      "url": "https://openai.com/academy/applications-of-ai",
-      "source": "OpenAI",
-      "date": "2026-04-10",
-      "excerpt": "Explore how OpenAI products like ChatGPT, Codex, and APIs bring AI into real-world use for work, development, and everyday tasks.",
+      "title": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+      "source": "Google",
+      "date": "2026-04-13",
+      "excerpt": "Gemini Robotics ER 1.6: Enhancing spatial reasoning and multi-view understanding for autonomous robotics.",
       "type": "article"
     },
     {
@@ -34,11 +50,19 @@
       "type": "article"
     },
     {
-      "title": "Brainstorming with ChatGPT",
-      "url": "https://openai.com/academy/brainstorming",
+      "title": "ChatGPT for marketing teams",
+      "url": "https://openai.com/academy/marketing",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how to use ChatGPT to brainstorm ideas, organize thinking, and turn rough concepts into structured, actionable plans.",
+      "excerpt": "Learn how marketing teams use ChatGPT to plan campaigns, generate content, analyze performance, and move from ideas to execution faster.",
+      "type": "article"
+    },
+    {
+      "title": "Getting started with ChatGPT",
+      "url": "https://openai.com/academy/getting-started",
+      "source": "OpenAI",
+      "date": "2026-04-10",
+      "excerpt": "Learn how to use ChatGPT, start your first conversation, and discover simple ways to write, brainstorm, and solve problems with AI.",
       "type": "article"
     },
     {
@@ -119,30 +143,6 @@
       "source": "Google AI",
       "date": "2026-04-02",
       "excerpt": "New AI capabilities are coming to Google Vids, powered by Lyria 3 and Veo 3.1, like high-quality video generation at no cost and more.",
-      "type": "article"
-    },
-    {
-      "title": "From RTX to Spark: NVIDIA Accelerates Gemma 4 for Local Agentic AI",
-      "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-open-models-google-gemma-4/",
-      "source": "Nvidia",
-      "date": "2026-04-02",
-      "excerpt": "Open models are driving a new wave of on-device AI, extending innovation beyond the cloud to everyday devices. As these models advance, their value increasingly depends on access to local, real-time c",
-      "type": "article"
-    },
-    {
-      "title": "Press Start on April: GeForce NOW Brings 10 Games to the Cloud",
-      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-april-2026-games-list/",
-      "source": "Nvidia",
-      "date": "2026-04-02",
-      "excerpt": "No joke — GFN Thursday is skipping the tricks and heading straight into the games. April kicks off with ten new titles, bringing fresh adventures to GeForce NOW, including the launch of Capcom’s highl",
-      "type": "article"
-    },
-    {
-      "title": "We’re creating a new satellite imagery map to help protect Brazil’s forests.",
-      "url": "https://blog.google/products-and-platforms/products/earth/satellite-imagery-brazilian-deforestation/",
-      "source": "Google AI",
-      "date": "2026-04-01",
-      "excerpt": "Google partnered with the Brazilian government on a satellite imagery map to help protect the country’s forests.",
       "type": "article"
     }
   ]
