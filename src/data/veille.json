@@ -1,6 +1,62 @@
 {
-  "updated_at": "2026-04-15",
+  "updated_at": "2026-04-16",
   "items": [
+    {
+      "title": "The next evolution of the Agents SDK",
+      "url": "https://openai.com/index/the-next-evolution-of-the-agents-sdk",
+      "source": "OpenAI",
+      "date": "2026-04-15",
+      "excerpt": "OpenAI updates the Agents SDK with native sandbox execution and a model-native harness, helping developers build secure, long-running agents across files and tools.",
+      "type": "article"
+    },
+    {
+      "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
+      "url": "https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech/",
+      "source": "Google",
+      "date": "2026-04-15",
+      "excerpt": "Our newest audio model introduces granular audio tags that give you precise control to direct AI speech for expressive audio generation.",
+      "type": "article"
+    },
+    {
+      "title": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents",
+      "url": "https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+      "source": "Hugging Face",
+      "date": "2026-04-15",
+      "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "Meet HoloTab by HCompany. Your AI browser companion.",
+      "url": "https://huggingface.co/blog/Hcompany/holotab",
+      "source": "Hugging Face",
+      "date": "2026-04-15",
+      "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/",
+      "source": "Google AI",
+      "date": "2026-04-15",
+      "excerpt": "Gemini 3.1 Flash TTS is now available across Google products.",
+      "type": "article"
+    },
+    {
+      "title": "Rethinking AI TCO: Why Cost per Token Is the Only Metric That Matters",
+      "url": "https://blogs.nvidia.com/blog/lowest-token-cost-ai-factories/",
+      "source": "Nvidia",
+      "date": "2026-04-15",
+      "excerpt": "Traditional data centers only stored, retrieved and processed data. In the generative and agentic AI era, these facilities have evolved into AI token factories. With AI inference becoming their primar",
+      "type": "article"
+    },
+    {
+      "title": "New Adobe Premiere Color Grading Mode Accelerated on NVIDIA GPUs",
+      "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-nab-adobe-premiere-color-mode/",
+      "source": "Nvidia",
+      "date": "2026-04-15",
+      "excerpt": "The NAB Show 2026 trade show, running April 18-22 in Las Vegas, is set to showcase a wave of new features and optimizations for top video editing applications. Bringing together over 60,000 content pr",
+      "type": "article"
+    },
     {
       "title": "Trusted access for the next era of cyber defense",
       "url": "https://openai.com/index/scaling-trusted-access-for-cyber-defense",
@@ -42,27 +98,19 @@
       "type": "article"
     },
     {
-      "title": "ChatGPT for finance teams",
-      "url": "https://openai.com/academy/finance",
+      "title": "Prompting fundamentals",
+      "url": "https://openai.com/academy/prompting",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how finance teams use ChatGPT to streamline reporting, analyze data, improve forecasts, and communicate insights more clearly.",
+      "excerpt": "Learn prompting fundamentals and how to write clear, effective prompts to get better, more useful responses from ChatGPT.",
       "type": "article"
     },
     {
-      "title": "ChatGPT for marketing teams",
-      "url": "https://openai.com/academy/marketing",
+      "title": "Using projects in ChatGPT",
+      "url": "https://openai.com/academy/projects",
       "source": "OpenAI",
       "date": "2026-04-10",
-      "excerpt": "Learn how marketing teams use ChatGPT to plan campaigns, generate content, analyze performance, and move from ideas to execution faster.",
-      "type": "article"
-    },
-    {
-      "title": "Getting started with ChatGPT",
-      "url": "https://openai.com/academy/getting-started",
-      "source": "OpenAI",
-      "date": "2026-04-10",
-      "excerpt": "Learn how to use ChatGPT, start your first conversation, and discover simple ways to write, brainstorm, and solve problems with AI.",
+      "excerpt": "Learn how to use orojects in ChatGPT to organize chats, files, and instructions, manage ongoing work, and collaborate more effectively.",
       "type": "article"
     },
     {
@@ -95,54 +143,6 @@
       "source": "Nvidia",
       "date": "2026-04-09",
       "excerpt": "A timeless story of grit, faith and rebellion takes center stage as Samson: A Tyndalston Story joins the GeForce NOW library today. The highly anticipated release from Liquid Swords can now be streame",
-      "type": "article"
-    },
-    {
-      "title": "ALTK‑Evolve: On‑the‑Job Learning for AI Agents",
-      "url": "https://huggingface.co/blog/ibm-research/altk-evolve",
-      "source": "Hugging Face",
-      "date": "2026-04-08",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "Safetensors is Joining the PyTorch Foundation",
-      "url": "https://huggingface.co/blog/safetensors-joins-pytorch-foundation",
-      "source": "Hugging Face",
-      "date": "2026-04-08",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "Gemma 4: Byte for byte, the most capable open models",
-      "url": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models/",
-      "source": "Google",
-      "date": "2026-04-02",
-      "excerpt": "Gemma 4: Our most intelligent open models to date, purpose-built for advanced reasoning and agentic workflows.",
-      "type": "article"
-    },
-    {
-      "title": "Welcome Gemma 4: Frontier multimodal intelligence on device",
-      "url": "https://huggingface.co/blog/gemma4",
-      "source": "Hugging Face",
-      "date": "2026-04-02",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "New ways to balance cost and reliability in the Gemini API",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/",
-      "source": "Google AI",
-      "date": "2026-04-02",
-      "excerpt": "Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.",
-      "type": "article"
-    },
-    {
-      "title": "Create, edit and share videos at no cost in Google Vids",
-      "url": "https://blog.google/products-and-platforms/products/workspace/google-vids-updates-lyria-veo/",
-      "source": "Google AI",
-      "date": "2026-04-02",
-      "excerpt": "New AI capabilities are coming to Google Vids, powered by Lyria 3 and Veo 3.1, like high-quality video generation at no cost and more.",
       "type": "article"
     }
   ]
