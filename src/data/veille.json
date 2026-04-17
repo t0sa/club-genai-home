@@ -1,6 +1,70 @@
 {
-  "updated_at": "2026-04-16",
+  "updated_at": "2026-04-17",
   "items": [
+    {
+      "title": "Codex for (almost) everything",
+      "url": "https://openai.com/index/codex-for-almost-everything",
+      "source": "OpenAI",
+      "date": "2026-04-16",
+      "excerpt": "The updated Codex app for macOS and Windows adds computer use, in-app browsing, image generation, memory, and plugins to accelerate developer workflows.",
+      "type": "article"
+    },
+    {
+      "title": "Introducing GPT-Rosalind for life sciences research",
+      "url": "https://openai.com/index/introducing-gpt-rosalind",
+      "source": "OpenAI",
+      "date": "2026-04-16",
+      "excerpt": "OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.",
+      "type": "article"
+    },
+    {
+      "title": "Accelerating the cyber defense ecosystem that protects us all",
+      "url": "https://openai.com/index/accelerating-cyber-defense-ecosystem",
+      "source": "OpenAI",
+      "date": "2026-04-16",
+      "excerpt": "Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber defense.",
+      "type": "article"
+    },
+    {
+      "title": "The PR you would have opened yourself",
+      "url": "https://huggingface.co/blog/transformers-to-mlx",
+      "source": "Hugging Face",
+      "date": "2026-04-16",
+      "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "Training and Finetuning Multimodal Embedding & Reranker Models with Sentence Transformers",
+      "url": "https://huggingface.co/blog/train-multimodal-sentence-transformers",
+      "source": "Hugging Face",
+      "date": "2026-04-16",
+      "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "A new way to explore the web with AI Mode in Chrome",
+      "url": "https://blog.google/products-and-platforms/products/search/ai-mode-chrome/",
+      "source": "Google AI",
+      "date": "2026-04-16",
+      "excerpt": "Today’s upgrades for AI Mode in Chrome transform how you interact with the web",
+      "type": "article"
+    },
+    {
+      "title": "New ways to create personalized images in the Gemini app",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
+      "source": "Google AI",
+      "date": "2026-04-16",
+      "excerpt": "Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.",
+      "type": "article"
+    },
+    {
+      "title": "No Need for Space Gear — Capcom’s ‘PRAGMATA’ Joins GeForce NOW on Launch Day",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-pragmata/",
+      "source": "Nvidia",
+      "date": "2026-04-16",
+      "excerpt": "Head straight for orbit with GeForce NOW — no space helmet required. PRAGMATA, Capcom’s long-awaited sci-fi action adventure, touches down on GeForce NOW the same day it launches worldwide. The futuri",
+      "type": "article"
+    },
     {
       "title": "The next evolution of the Agents SDK",
       "url": "https://openai.com/index/the-next-evolution-of-the-agents-sdk",
@@ -58,6 +122,14 @@
       "type": "article"
     },
     {
+      "title": "AIScientists-Dev/WorldSeed — A world engine where AI agents live autonomously — define any scenario in YAML, watch stories emerge",
+      "url": "https://github.com/AIScientists-Dev/WorldSeed",
+      "source": "GitHub",
+      "date": "2026-04-15",
+      "excerpt": "A world engine where AI agents live autonomously — define any scenario in YAML, watch stories emerge",
+      "type": "repo"
+    },
+    {
       "title": "Trusted access for the next era of cyber defense",
       "url": "https://openai.com/index/scaling-trusted-access-for-cyber-defense",
       "source": "OpenAI",
@@ -71,78 +143,6 @@
       "source": "Google AI",
       "date": "2026-04-14",
       "excerpt": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
-      "type": "article"
-    },
-    {
-      "title": "Bringing people together at AI for the Economy Forum",
-      "url": "https://blog.google/company-news/outreach-and-initiatives/creating-opportunity/ai-economy-forum/",
-      "source": "Google AI",
-      "date": "2026-04-14",
-      "excerpt": "Google is bringing people together in Washington D.C. at our AI for the Economy Forum.",
-      "type": "article"
-    },
-    {
-      "title": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
-      "url": "https://openai.com/index/cloudflare-openai-agent-cloud",
-      "source": "OpenAI",
-      "date": "2026-04-13",
-      "excerpt": "Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with speed and security.",
-      "type": "article"
-    },
-    {
-      "title": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
-      "url": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
-      "source": "Google",
-      "date": "2026-04-13",
-      "excerpt": "Gemini Robotics ER 1.6: Enhancing spatial reasoning and multi-view understanding for autonomous robotics.",
-      "type": "article"
-    },
-    {
-      "title": "Prompting fundamentals",
-      "url": "https://openai.com/academy/prompting",
-      "source": "OpenAI",
-      "date": "2026-04-10",
-      "excerpt": "Learn prompting fundamentals and how to write clear, effective prompts to get better, more useful responses from ChatGPT.",
-      "type": "article"
-    },
-    {
-      "title": "Using projects in ChatGPT",
-      "url": "https://openai.com/academy/projects",
-      "source": "OpenAI",
-      "date": "2026-04-10",
-      "excerpt": "Learn how to use orojects in ChatGPT to organize chats, files, and instructions, manage ongoing work, and collaborate more effectively.",
-      "type": "article"
-    },
-    {
-      "title": "National Robotics Week — Latest Physical AI Research, Breakthroughs and Resources",
-      "url": "https://blogs.nvidia.com/blog/national-robotics-week-2026/",
-      "source": "Nvidia",
-      "date": "2026-04-10",
-      "excerpt": "This National Robotics Week, NVIDIA is highlighting the breakthroughs that are bringing AI into the physical world — as well as the growing wave of robots transforming industries, from agricultural an",
-      "type": "article"
-    },
-    {
-      "title": "Waypoint-1.5: Higher-Fidelity Interactive Worlds for Everyday GPUs",
-      "url": "https://huggingface.co/blog/waypoint-1-5",
-      "source": "Hugging Face",
-      "date": "2026-04-09",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "Multimodal Embedding & Reranker Models with Sentence Transformers",
-      "url": "https://huggingface.co/blog/multimodal-sentence-transformers",
-      "source": "Hugging Face",
-      "date": "2026-04-09",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "Strength and Destiny Collide: ‘Samson: A Tyndalston Story’ Arrives in the Cloud",
-      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-samson-a-tyndalston-story/",
-      "source": "Nvidia",
-      "date": "2026-04-09",
-      "excerpt": "A timeless story of grit, faith and rebellion takes center stage as Samson: A Tyndalston Story joins the GeForce NOW library today. The highly anticipated release from Liquid Swords can now be streame",
       "type": "article"
     }
   ]
