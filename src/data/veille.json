@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-04-17",
+  "updated_at": "2026-04-18",
   "items": [
+    {
+      "title": "Building a Fast Multilingual OCR Model with Synthetic Data",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-ocr-v2",
+      "source": "Hugging Face",
+      "date": "2026-04-17",
+      "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "7 ways to travel smarter this summer, with help from Google",
+      "url": "https://blog.google/products-and-platforms/products/search/summer-travel-tips-google-search-ai/",
+      "source": "Google AI",
+      "date": "2026-04-17",
+      "excerpt": "The latest tools from Google can help you plan trips, find a great deal and explore your next destination.",
+      "type": "article"
+    },
     {
       "title": "Codex for (almost) everything",
       "url": "https://openai.com/index/codex-for-almost-everything",
@@ -23,6 +39,14 @@
       "source": "OpenAI",
       "date": "2026-04-16",
       "excerpt": "Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber defense.",
+      "type": "article"
+    },
+    {
+      "title": "Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents",
+      "url": "https://huggingface.co/blog/ecom-rlve",
+      "source": "Hugging Face",
+      "date": "2026-04-16",
+      "excerpt": "",
       "type": "article"
     },
     {
@@ -90,14 +114,6 @@
       "type": "article"
     },
     {
-      "title": "Meet HoloTab by HCompany. Your AI browser companion.",
-      "url": "https://huggingface.co/blog/Hcompany/holotab",
-      "source": "Hugging Face",
-      "date": "2026-04-15",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
       "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/",
       "source": "Google AI",
@@ -122,28 +138,12 @@
       "type": "article"
     },
     {
-      "title": "AIScientists-Dev/WorldSeed — A world engine where AI agents live autonomously — define any scenario in YAML, watch stories emerge",
+      "title": "AIScientists-Dev/WorldSeed — A world engine where AI agents live autonomously — physical rules, information asymmetry, any agent can plug in. Define scenarios in YAML, watch stories emerge.",
       "url": "https://github.com/AIScientists-Dev/WorldSeed",
       "source": "GitHub",
       "date": "2026-04-15",
-      "excerpt": "A world engine where AI agents live autonomously — define any scenario in YAML, watch stories emerge",
+      "excerpt": "A world engine where AI agents live autonomously — physical rules, information asymmetry, any agent can plug in. Define scenarios in YAML, watch stories emerge.",
       "type": "repo"
-    },
-    {
-      "title": "Trusted access for the next era of cyber defense",
-      "url": "https://openai.com/index/scaling-trusted-access-for-cyber-defense",
-      "source": "OpenAI",
-      "date": "2026-04-14",
-      "excerpt": "OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and strengthening safeguards as AI cybersecurity capabilities advance.",
-      "type": "article"
-    },
-    {
-      "title": "Turn your best AI prompts into one-click tools in Chrome",
-      "url": "https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/",
-      "source": "Google AI",
-      "date": "2026-04-14",
-      "excerpt": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
-      "type": "article"
     }
   ]
 }
