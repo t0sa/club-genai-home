@@ -1,12 +1,36 @@
 {
-  "updated_at": "2026-04-20",
+  "updated_at": "2026-04-21",
   "items": [
     {
-      "title": "Building a Fast Multilingual OCR Model with Synthetic Data",
-      "url": "https://huggingface.co/blog/nvidia/nemotron-ocr-v2",
+      "title": "How to Ground a Korean AI Agent in Real Demographics with Synthetic Personas",
+      "url": "https://huggingface.co/blog/nvidia/build-korean-agents-with-nemotron-personas",
       "source": "Hugging Face",
-      "date": "2026-04-17",
+      "date": "2026-04-21",
       "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "OpenAI helps Hyatt advance AI among colleagues",
+      "url": "https://openai.com/index/hyatt-advances-ai-with-chatgpt-enterprise",
+      "source": "OpenAI",
+      "date": "2026-04-20",
+      "excerpt": "Hyatt deploys ChatGPT Enterprise across its global workforce, using GPT-5.4 and Codex to improve productivity, operations, and guest experiences.",
+      "type": "article"
+    },
+    {
+      "title": "Autonomous AI at Scale: Adobe Agents Unlock Breakthrough Creative Intelligence With NVIDIA and WPP",
+      "url": "https://blogs.nvidia.com/blog/adobe-ai-agents-nvidia-wpp/",
+      "source": "Nvidia",
+      "date": "2026-04-20",
+      "excerpt": "AI agents are transforming how work gets done across all industries, accelerating everything from content creation to decision-making. NVIDIA’s expanded strategic collaborations with Adobe and WPP are",
+      "type": "article"
+    },
+    {
+      "title": "NVIDIA and Partners Showcase the Future of AI-Driven Manufacturing at Hannover Messe 2026",
+      "url": "https://blogs.nvidia.com/blog/ai-manufacturing-hannover-messe/",
+      "source": "Nvidia",
+      "date": "2026-04-20",
+      "excerpt": "Manufacturing is at an inflection point. Across every major industrial economy, the pressure to do more with less — due to faster design cycles, leaner operations and strain on skilled labor pools — i",
       "type": "article"
     },
     {
@@ -120,30 +144,6 @@
       "date": "2026-04-15",
       "excerpt": "Gemini 3.1 Flash TTS is now available across Google products.",
       "type": "article"
-    },
-    {
-      "title": "Rethinking AI TCO: Why Cost per Token Is the Only Metric That Matters",
-      "url": "https://blogs.nvidia.com/blog/lowest-token-cost-ai-factories/",
-      "source": "Nvidia",
-      "date": "2026-04-15",
-      "excerpt": "Traditional data centers only stored, retrieved and processed data. In the generative and agentic AI era, these facilities have evolved into AI token factories. With AI inference becoming their primar",
-      "type": "article"
-    },
-    {
-      "title": "New Adobe Premiere Color Grading Mode Accelerated on NVIDIA GPUs",
-      "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-nab-adobe-premiere-color-mode/",
-      "source": "Nvidia",
-      "date": "2026-04-15",
-      "excerpt": "The NAB Show 2026 trade show, running April 18-22 in Las Vegas, is set to showcase a wave of new features and optimizations for top video editing applications. Bringing together over 60,000 content pr",
-      "type": "article"
-    },
-    {
-      "title": "AIScientists-Dev/WorldSeed — A world engine where AI agents live autonomously — physical rules, information asymmetry, any agent can plug in. Define scenarios in YAML, watch stories emerge.",
-      "url": "https://github.com/AIScientists-Dev/WorldSeed",
-      "source": "GitHub",
-      "date": "2026-04-15",
-      "excerpt": "A world engine where AI agents live autonomously — physical rules, information asymmetry, any agent can plug in. Define scenarios in YAML, watch stories emerge.",
-      "type": "repo"
     }
   ]
 }
