@@ -1,25 +1,89 @@
 {
-  "updated_at": "2026-04-22",
+  "updated_at": "2026-04-23",
   "items": [
     {
-      "title": "Scaling Codex to enterprises worldwide",
-      "url": "https://openai.com/index/scaling-codex-to-enterprises-worldwide",
+      "title": "Making ChatGPT better for clinicians",
+      "url": "https://openai.com/index/making-chatgpt-better-for-clinicians",
       "source": "OpenAI",
+      "date": "2026-04-22",
+      "excerpt": "OpenAI makes ChatGPT for Clinicians free for verified U.S. physicians, nurse practitioners, and pharmacists, supporting clinical care, documentation, and research.",
+      "type": "article"
+    },
+    {
+      "title": "Speeding up agentic workflows with WebSockets in the Responses API",
+      "url": "https://openai.com/index/speeding-up-agentic-workflows-with-websockets",
+      "source": "OpenAI",
+      "date": "2026-04-22",
+      "excerpt": "A deep dive into the Codex agent loop, showing how WebSockets and connection-scoped caching reduced API overhead and improved model latency.",
+      "type": "article"
+    },
+    {
+      "title": "Introducing workspace agents in ChatGPT",
+      "url": "https://openai.com/index/introducing-workspace-agents-in-chatgpt",
+      "source": "OpenAI",
+      "date": "2026-04-22",
+      "excerpt": "Workspace agents in ChatGPT are Codex-powered agents that automate complex workflows, run in the cloud, and help teams scale work across tools securely.",
+      "type": "article"
+    },
+    {
+      "title": "Workspace agents",
+      "url": "https://openai.com/academy/workspace-agents",
+      "source": "OpenAI",
+      "date": "2026-04-22",
+      "excerpt": "Learn how to build, use, and scale workspace agents in ChatGPT to automate repeatable workflows, connect tools, and streamline team operations.",
+      "type": "article"
+    },
+    {
+      "title": "Introducing OpenAI Privacy Filter",
+      "url": "https://openai.com/index/introducing-openai-privacy-filter",
+      "source": "OpenAI",
+      "date": "2026-04-22",
+      "excerpt": "OpenAI Privacy Filter is an open-weight model for detecting and redacting personally identifiable information (PII) in text with state-of-the-art accuracy",
+      "type": "article"
+    },
+    {
+      "title": "Gemma 4 VLA Demo on Jetson Orin Nano Super",
+      "url": "https://huggingface.co/blog/nvidia/gemma4",
+      "source": "Hugging Face",
+      "date": "2026-04-22",
+      "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "We're launching two specialized TPUs for the agentic era.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/tpus-8t-8i-cloud-next/",
+      "source": "Google AI",
+      "date": "2026-04-22",
+      "excerpt": "The eighth generation of Google’s TPU includes two specialized chips that will power the future of AI.",
+      "type": "article"
+    },
+    {
+      "title": "From Rainforests to Recycling Plants: 5 Ways NVIDIA AI Is Protecting the Planet",
+      "url": "https://blogs.nvidia.com/blog/earth-day-2026-ai-accelerated-computing/",
+      "source": "Nvidia",
+      "date": "2026-04-22",
+      "excerpt": "Across climate, conservation, disaster monitoring and recycling, NVIDIA AI is enabling applications protecting the planet.",
+      "type": "article"
+    },
+    {
+      "title": "NVIDIA and Google Cloud Collaborate to Advance Agentic and Physical AI",
+      "url": "https://blogs.nvidia.com/blog/google-cloud-agentic-physical-ai-factories/",
+      "source": "Nvidia",
+      "date": "2026-04-22",
+      "excerpt": "NVIDIA and Google Cloud have collaborated for more than a decade, co‑engineering a full‑stack AI platform that spans every technology layer — from performance‑optimized libraries and frameworks to ent",
+      "type": "article"
+    },
+    {
+      "title": "Partnering with industry leaders to accelerate AI transformation",
+      "url": "https://deepmind.google/blog/partnering-with-industry-leaders-to-accelerate-ai-transformation/",
+      "source": "Google",
       "date": "2026-04-21",
-      "excerpt": "OpenAI launches Codex Labs, partners with with Accenture, PwC, Infosys, and others to help enterprises deploy and scale Codex across the software development lifecycle, and hits 4M Codex WAU.",
+      "excerpt": "Google DeepMind partners with global consultancies to bring the power of frontier AI to organizations around the world.",
       "type": "article"
     },
     {
       "title": "QIMMA قِمّة ⛰: A Quality-First Arabic LLM Leaderboard",
       "url": "https://huggingface.co/blog/tiiuae/qimma-arabic-leaderboard",
-      "source": "Hugging Face",
-      "date": "2026-04-21",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "How to Ground a Korean AI Agent in Real Demographics with Synthetic Personas",
-      "url": "https://huggingface.co/blog/nvidia/build-korean-agents-with-nemotron-personas",
       "source": "Hugging Face",
       "date": "2026-04-21",
       "excerpt": "",
@@ -42,14 +106,6 @@
       "type": "article"
     },
     {
-      "title": "OpenAI helps Hyatt advance AI among colleagues",
-      "url": "https://openai.com/index/hyatt-advances-ai-with-chatgpt-enterprise",
-      "source": "OpenAI",
-      "date": "2026-04-20",
-      "excerpt": "Hyatt deploys ChatGPT Enterprise across its global workforce, using GPT-5.4 and Codex to improve productivity, operations, and guest experiences.",
-      "type": "article"
-    },
-    {
       "title": "Autonomous AI at Scale: Adobe Agents Unlock Breakthrough Creative Intelligence With NVIDIA and WPP",
       "url": "https://blogs.nvidia.com/blog/adobe-ai-agents-nvidia-wpp/",
       "source": "Nvidia",
@@ -66,6 +122,14 @@
       "type": "article"
     },
     {
+      "title": "YGYOOO/WorldX — One sentence creates an AI-driven world — generate maps, characters, and watch stories emerge on their own.",
+      "url": "https://github.com/YGYOOO/WorldX",
+      "source": "GitHub",
+      "date": "2026-04-18",
+      "excerpt": "One sentence creates an AI-driven world — generate maps, characters, and watch stories emerge on their own.",
+      "type": "repo"
+    },
+    {
       "title": "7 ways to travel smarter this summer, with help from Google",
       "url": "https://blog.google/products-and-platforms/products/search/summer-travel-tips-google-search-ai/",
       "source": "Google AI",
@@ -74,75 +138,11 @@
       "type": "article"
     },
     {
-      "title": "Codex for (almost) everything",
-      "url": "https://openai.com/index/codex-for-almost-everything",
-      "source": "OpenAI",
-      "date": "2026-04-16",
-      "excerpt": "The updated Codex app for macOS and Windows adds computer use, in-app browsing, image generation, memory, and plugins to accelerate developer workflows.",
-      "type": "article"
-    },
-    {
-      "title": "Introducing GPT-Rosalind for life sciences research",
-      "url": "https://openai.com/index/introducing-gpt-rosalind",
-      "source": "OpenAI",
-      "date": "2026-04-16",
-      "excerpt": "OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.",
-      "type": "article"
-    },
-    {
-      "title": "Accelerating the cyber defense ecosystem that protects us all",
-      "url": "https://openai.com/index/accelerating-cyber-defense-ecosystem",
-      "source": "OpenAI",
-      "date": "2026-04-16",
-      "excerpt": "Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber defense.",
-      "type": "article"
-    },
-    {
       "title": "Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents",
       "url": "https://huggingface.co/blog/ecom-rlve",
       "source": "Hugging Face",
       "date": "2026-04-16",
       "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "The PR you would have opened yourself",
-      "url": "https://huggingface.co/blog/transformers-to-mlx",
-      "source": "Hugging Face",
-      "date": "2026-04-16",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "A new way to explore the web with AI Mode in Chrome",
-      "url": "https://blog.google/products-and-platforms/products/search/ai-mode-chrome/",
-      "source": "Google AI",
-      "date": "2026-04-16",
-      "excerpt": "Today’s upgrades for AI Mode in Chrome transform how you interact with the web",
-      "type": "article"
-    },
-    {
-      "title": "New ways to create personalized images in the Gemini app",
-      "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
-      "source": "Google AI",
-      "date": "2026-04-16",
-      "excerpt": "Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.",
-      "type": "article"
-    },
-    {
-      "title": "No Need for Space Gear — Capcom’s ‘PRAGMATA’ Joins GeForce NOW on Launch Day",
-      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-pragmata/",
-      "source": "Nvidia",
-      "date": "2026-04-16",
-      "excerpt": "Head straight for orbit with GeForce NOW — no space helmet required. PRAGMATA, Capcom’s long-awaited sci-fi action adventure, touches down on GeForce NOW the same day it launches worldwide. The futuri",
-      "type": "article"
-    },
-    {
-      "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
-      "url": "https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech/",
-      "source": "Google",
-      "date": "2026-04-15",
-      "excerpt": "Our newest audio model introduces granular audio tags that give you precise control to direct AI speech for expressive audio generation.",
       "type": "article"
     }
   ]
