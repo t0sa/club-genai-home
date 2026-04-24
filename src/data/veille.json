@@ -1,44 +1,92 @@
 {
-  "updated_at": "2026-04-23",
+  "updated_at": "2026-04-24",
   "items": [
     {
-      "title": "Making ChatGPT better for clinicians",
-      "url": "https://openai.com/index/making-chatgpt-better-for-clinicians",
+      "title": "Introducing GPT-5.5",
+      "url": "https://openai.com/index/introducing-gpt-5-5",
       "source": "OpenAI",
-      "date": "2026-04-22",
-      "excerpt": "OpenAI makes ChatGPT for Clinicians free for verified U.S. physicians, nurse practitioners, and pharmacists, supporting clinical care, documentation, and research.",
+      "date": "2026-04-23",
+      "excerpt": "Introducing GPT-5.5, our smartest model yet—faster, more capable, and built for complex tasks like coding, research, and data analysis across tools.",
       "type": "article"
     },
     {
-      "title": "Speeding up agentic workflows with WebSockets in the Responses API",
-      "url": "https://openai.com/index/speeding-up-agentic-workflows-with-websockets",
+      "title": "GPT-5.5 System Card",
+      "url": "https://openai.com/index/gpt-5-5-system-card",
       "source": "OpenAI",
-      "date": "2026-04-22",
-      "excerpt": "A deep dive into the Codex agent loop, showing how WebSockets and connection-scoped caching reduced API overhead and improved model latency.",
+      "date": "2026-04-23",
+      "excerpt": "",
       "type": "article"
     },
     {
-      "title": "Introducing workspace agents in ChatGPT",
-      "url": "https://openai.com/index/introducing-workspace-agents-in-chatgpt",
+      "title": "Automations",
+      "url": "https://openai.com/academy/codex-automations",
       "source": "OpenAI",
-      "date": "2026-04-22",
-      "excerpt": "Workspace agents in ChatGPT are Codex-powered agents that automate complex workflows, run in the cloud, and help teams scale work across tools securely.",
+      "date": "2026-04-23",
+      "excerpt": "Learn how to automate tasks in Codex using schedules and triggers to create reports, summaries, and recurring workflows without manual effort.",
       "type": "article"
     },
     {
-      "title": "Workspace agents",
-      "url": "https://openai.com/academy/workspace-agents",
+      "title": "Top 10 uses for Codex at work",
+      "url": "https://openai.com/academy/top-10-use-cases-codex-for-work",
       "source": "OpenAI",
-      "date": "2026-04-22",
-      "excerpt": "Learn how to build, use, and scale workspace agents in ChatGPT to automate repeatable workflows, connect tools, and streamline team operations.",
+      "date": "2026-04-23",
+      "excerpt": "Explore 10 practical Codex use cases to automate tasks, create deliverables, and turn real inputs into outputs across tools, files, and workflows.",
       "type": "article"
     },
     {
-      "title": "Introducing OpenAI Privacy Filter",
-      "url": "https://openai.com/index/introducing-openai-privacy-filter",
+      "title": "Plugins and skills",
+      "url": "https://openai.com/academy/codex-plugins-and-skills",
       "source": "OpenAI",
+      "date": "2026-04-23",
+      "excerpt": "Learn how to use Codex plugins and skills to connect tools, access data, and follow repeatable workflows to automate tasks and improve results.",
+      "type": "article"
+    },
+    {
+      "title": "Here’s how our TPUs power increasingly demanding AI workloads.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/what-is-a-tpu/",
+      "source": "Google AI",
+      "date": "2026-04-23",
+      "excerpt": "Learn how Google’s TPUs power increasingly demanding AI workloads with this new video.",
+      "type": "article"
+    },
+    {
+      "title": "Elevating Austria: Google invests in its first data center in the Alps.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/google-data-center-austria/",
+      "source": "Google AI",
+      "date": "2026-04-23",
+      "excerpt": "Google has been a proud part of Austria’s landscape for years, and today, we’re announcing our first data center in Kronstorf, generating 100 direct jobs. This facility …",
+      "type": "article"
+    },
+    {
+      "title": "OpenAI’s New GPT-5.5 Powers Codex on NVIDIA Infrastructure — and NVIDIA Is Already Putting It to Work",
+      "url": "https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/",
+      "source": "Nvidia",
+      "date": "2026-04-23",
+      "excerpt": "AI agents have revolutionized developer workflows, and their next frontier is knowledge work: processing information, solving complex problems, coming up with new ideas and driving innovation. Codex, ",
+      "type": "article"
+    },
+    {
+      "title": "Tag, You’re It: GeForce NOW Levels Up Game Discovery With Xbox Game Pass and Ubisoft+ Labels",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-in-app-labels/",
+      "source": "Nvidia",
+      "date": "2026-04-23",
+      "excerpt": "GeForce NOW is doubling down on what matters most: gamers. This week’s upgrades bring smarter libraries, making it easier than ever for gamers to turn a PC collection into a cloud-powered flex. It sta",
+      "type": "article"
+    },
+    {
+      "title": "Making Sense of the Early Universe",
+      "url": "https://blogs.nvidia.com/blog/ai-gpu-early-universe-astronomy/",
+      "source": "Nvidia",
+      "date": "2026-04-23",
+      "excerpt": "This Spring Astronomy Day, here’s a look at how AI and GPUs are helping astronomers work through unprecedented volumes of cosmic data.",
+      "type": "article"
+    },
+    {
+      "title": "Decoupled DiLoCo: A new frontier for resilient, distributed AI training",
+      "url": "https://deepmind.google/blog/decoupled-diloco/",
+      "source": "Google",
       "date": "2026-04-22",
-      "excerpt": "OpenAI Privacy Filter is an open-weight model for detecting and redacting personally identifiable information (PII) in text with state-of-the-art accuracy",
+      "excerpt": "",
       "type": "article"
     },
     {
@@ -94,54 +142,6 @@
       "url": "https://huggingface.co/blog/cybersecurity-openness",
       "source": "Hugging Face",
       "date": "2026-04-21",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "3 new ways Ads Advisor is making Google Ads safer and faster",
-      "url": "https://blog.google/products/ads-commerce/ads-advisor-google-ads/",
-      "source": "Google AI",
-      "date": "2026-04-21",
-      "excerpt": "Three new agentic safety and policy features integrated into Ads Advisor will help protect and streamline your Google Ads account.",
-      "type": "article"
-    },
-    {
-      "title": "Autonomous AI at Scale: Adobe Agents Unlock Breakthrough Creative Intelligence With NVIDIA and WPP",
-      "url": "https://blogs.nvidia.com/blog/adobe-ai-agents-nvidia-wpp/",
-      "source": "Nvidia",
-      "date": "2026-04-20",
-      "excerpt": "AI agents are transforming how work gets done across all industries, accelerating everything from content creation to decision-making. NVIDIA’s expanded strategic collaborations with Adobe and WPP are",
-      "type": "article"
-    },
-    {
-      "title": "NVIDIA and Partners Showcase the Future of AI-Driven Manufacturing at Hannover Messe 2026",
-      "url": "https://blogs.nvidia.com/blog/ai-manufacturing-hannover-messe/",
-      "source": "Nvidia",
-      "date": "2026-04-20",
-      "excerpt": "Manufacturing is at an inflection point. Across every major industrial economy, the pressure to do more with less — due to faster design cycles, leaner operations and strain on skilled labor pools — i",
-      "type": "article"
-    },
-    {
-      "title": "YGYOOO/WorldX — One sentence creates an AI-driven world — generate maps, characters, and watch stories emerge on their own.",
-      "url": "https://github.com/YGYOOO/WorldX",
-      "source": "GitHub",
-      "date": "2026-04-18",
-      "excerpt": "One sentence creates an AI-driven world — generate maps, characters, and watch stories emerge on their own.",
-      "type": "repo"
-    },
-    {
-      "title": "7 ways to travel smarter this summer, with help from Google",
-      "url": "https://blog.google/products-and-platforms/products/search/summer-travel-tips-google-search-ai/",
-      "source": "Google AI",
-      "date": "2026-04-17",
-      "excerpt": "The latest tools from Google can help you plan trips, find a great deal and explore your next destination.",
-      "type": "article"
-    },
-    {
-      "title": "Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents",
-      "url": "https://huggingface.co/blog/ecom-rlve",
-      "source": "Hugging Face",
-      "date": "2026-04-16",
       "excerpt": "",
       "type": "article"
     }
