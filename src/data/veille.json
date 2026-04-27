@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-04-26",
+  "updated_at": "2026-04-27",
   "items": [
+    {
+      "title": "Announcing our partnership with the Republic of Korea",
+      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
+      "source": "Google",
+      "date": "2026-04-27",
+      "excerpt": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+      "type": "article"
+    },
+    {
+      "title": "Our principles",
+      "url": "https://openai.com/index/our-principles",
+      "source": "OpenAI",
+      "date": "2026-04-26",
+      "excerpt": "Our mission is to ensure that AGI benefits all of humanity. Sam Altman shares five principles that guide our work.",
+      "type": "article"
+    },
     {
       "title": "DeepSeek-V4: a million-token context that agents can actually use",
       "url": "https://huggingface.co/blog/deepseekv4",
@@ -18,19 +34,19 @@
       "type": "article"
     },
     {
-      "title": "Introducing GPT-5.5",
-      "url": "https://openai.com/index/introducing-gpt-5-5",
-      "source": "OpenAI",
-      "date": "2026-04-23",
-      "excerpt": "Introducing GPT-5.5, our smartest model yet—faster, more capable, and built for complex tasks like coding, research, and data analysis across tools.",
-      "type": "article"
-    },
-    {
       "title": "GPT-5.5 System Card",
       "url": "https://openai.com/index/gpt-5-5-system-card",
       "source": "OpenAI",
       "date": "2026-04-23",
       "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "Introducing GPT-5.5",
+      "url": "https://openai.com/index/introducing-gpt-5-5",
+      "source": "OpenAI",
+      "date": "2026-04-23",
+      "excerpt": "Introducing GPT-5.5, our smartest model yet—faster, more capable, and built for complex tasks like coding, research, and data analysis across tools.",
       "type": "article"
     },
     {
@@ -42,19 +58,11 @@
       "type": "article"
     },
     {
-      "title": "Top 10 uses for Codex at work",
-      "url": "https://openai.com/academy/top-10-use-cases-codex-for-work",
+      "title": "How to get started with Codex",
+      "url": "https://openai.com/academy/codex-how-to-start",
       "source": "OpenAI",
       "date": "2026-04-23",
-      "excerpt": "Explore 10 practical Codex use cases to automate tasks, create deliverables, and turn real inputs into outputs across tools, files, and workflows.",
-      "type": "article"
-    },
-    {
-      "title": "Plugins and skills",
-      "url": "https://openai.com/academy/codex-plugins-and-skills",
-      "source": "OpenAI",
-      "date": "2026-04-23",
-      "excerpt": "Learn how to use Codex plugins and skills to connect tools, access data, and follow repeatable workflows to automate tasks and improve results.",
+      "excerpt": "Learn how to get started with Codex by setting up projects, creating threads, and completing your first tasks with step-by-step guidance.",
       "type": "article"
     },
     {
@@ -135,14 +143,6 @@
       "source": "Nvidia",
       "date": "2026-04-22",
       "excerpt": "Across climate, conservation, disaster monitoring and recycling, NVIDIA AI is enabling applications protecting the planet.",
-      "type": "article"
-    },
-    {
-      "title": "NVIDIA and Google Cloud Collaborate to Advance Agentic and Physical AI",
-      "url": "https://blogs.nvidia.com/blog/google-cloud-agentic-physical-ai-factories/",
-      "source": "Nvidia",
-      "date": "2026-04-22",
-      "excerpt": "NVIDIA and Google Cloud have collaborated for more than a decade, co‑engineering a full‑stack AI platform that spans every technology layer — from performance‑optimized libraries and frameworks to ent",
       "type": "article"
     }
   ]
