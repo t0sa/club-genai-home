@@ -1,12 +1,68 @@
 {
-  "updated_at": "2026-04-27",
+  "updated_at": "2026-04-28",
   "items": [
+    {
+      "title": "Adaptive Ultrasound Imaging with Physics-Informed NV-Raw2Insights-US AI",
+      "url": "https://huggingface.co/blog/nvidia/raw2insights-adaptive-ultrasound-imaging",
+      "source": "Hugging Face",
+      "date": "2026-04-28",
+      "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "OpenAI available at FedRAMP Moderate",
+      "url": "https://openai.com/index/openai-available-at-fedramp-moderate",
+      "source": "OpenAI",
+      "date": "2026-04-27",
+      "excerpt": "OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies.",
+      "type": "article"
+    },
+    {
+      "title": "The next phase of the Microsoft OpenAI partnership",
+      "url": "https://openai.com/index/next-phase-of-microsoft-partnership",
+      "source": "OpenAI",
+      "date": "2026-04-27",
+      "excerpt": "OpenAI and Microsoft announce an amended agreement that simplifies the partnership, adds long-term clarity, and supports continued AI innovation at scale.",
+      "type": "article"
+    },
+    {
+      "title": "An open-source spec for orchestration: Symphony",
+      "url": "https://openai.com/index/open-source-codex-orchestration-symphony",
+      "source": "OpenAI",
+      "date": "2026-04-27",
+      "excerpt": "Learn how Symphony, an open-source spec for Codex orchestration, turns issue trackers into always-on agent systems—boosting engineering output and reducing context switching.",
+      "type": "article"
+    },
+    {
+      "title": "Choco automates food distribution with AI agents",
+      "url": "https://openai.com/index/choco",
+      "source": "OpenAI",
+      "date": "2026-04-27",
+      "excerpt": "How Choco used OpenAI APIs to streamline food distribution, boost productivity, and unlock growth—an in-depth customer story on real-world AI impact.",
+      "type": "article"
+    },
     {
       "title": "Announcing our partnership with the Republic of Korea",
       "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
       "source": "Google",
       "date": "2026-04-27",
       "excerpt": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+      "type": "article"
+    },
+    {
+      "title": "How to build scalable web apps with OpenAI's Privacy Filter",
+      "url": "https://huggingface.co/blog/openai-privacy-filter-web-apps",
+      "source": "Hugging Face",
+      "date": "2026-04-27",
+      "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "Join the new AI Agents Vibe Coding Course from Google and Kaggle",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-genai-intensive-course-vibe-coding-june-2026/",
+      "source": "Google AI",
+      "date": "2026-04-27",
+      "excerpt": "Google is bringing back its 5-Day AI Agents Intensive Course with Kaggle and registration is open.",
       "type": "article"
     },
     {
@@ -31,38 +87,6 @@
       "source": "Google AI",
       "date": "2026-04-24",
       "excerpt": "Organize your home and digital space with Gemini. Use AI-powered tips for cleaning schedules, inbox decluttering, seasonal chores.",
-      "type": "article"
-    },
-    {
-      "title": "GPT-5.5 System Card",
-      "url": "https://openai.com/index/gpt-5-5-system-card",
-      "source": "OpenAI",
-      "date": "2026-04-23",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "Introducing GPT-5.5",
-      "url": "https://openai.com/index/introducing-gpt-5-5",
-      "source": "OpenAI",
-      "date": "2026-04-23",
-      "excerpt": "Introducing GPT-5.5, our smartest model yet—faster, more capable, and built for complex tasks like coding, research, and data analysis across tools.",
-      "type": "article"
-    },
-    {
-      "title": "Automations",
-      "url": "https://openai.com/academy/codex-automations",
-      "source": "OpenAI",
-      "date": "2026-04-23",
-      "excerpt": "Learn how to automate tasks in Codex using schedules and triggers to create reports, summaries, and recurring workflows without manual effort.",
-      "type": "article"
-    },
-    {
-      "title": "How to get started with Codex",
-      "url": "https://openai.com/academy/codex-how-to-start",
-      "source": "OpenAI",
-      "date": "2026-04-23",
-      "excerpt": "Learn how to get started with Codex by setting up projects, creating threads, and completing your first tasks with step-by-step guidance.",
       "type": "article"
     },
     {
@@ -119,30 +143,6 @@
       "source": "Google",
       "date": "2026-04-22",
       "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "Gemma 4 VLA Demo on Jetson Orin Nano Super",
-      "url": "https://huggingface.co/blog/nvidia/gemma4",
-      "source": "Hugging Face",
-      "date": "2026-04-22",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
-      "title": "We're launching two specialized TPUs for the agentic era.",
-      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/tpus-8t-8i-cloud-next/",
-      "source": "Google AI",
-      "date": "2026-04-22",
-      "excerpt": "The eighth generation of Google’s TPU includes two specialized chips that will power the future of AI.",
-      "type": "article"
-    },
-    {
-      "title": "From Rainforests to Recycling Plants: 5 Ways NVIDIA AI Is Protecting the Planet",
-      "url": "https://blogs.nvidia.com/blog/earth-day-2026-ai-accelerated-computing/",
-      "source": "Nvidia",
-      "date": "2026-04-22",
-      "excerpt": "Across climate, conservation, disaster monitoring and recycling, NVIDIA AI is enabling applications protecting the planet.",
       "type": "article"
     }
   ]
