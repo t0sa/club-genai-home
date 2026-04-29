@@ -1,13 +1,61 @@
 {
-  "updated_at": "2026-04-28",
+  "updated_at": "2026-04-29",
   "items": [
     {
-      "title": "Adaptive Ultrasound Imaging with Physics-Informed NV-Raw2Insights-US AI",
-      "url": "https://huggingface.co/blog/nvidia/raw2insights-adaptive-ultrasound-imaging",
+      "title": "OpenAI models, Codex, and Managed Agents come to AWS",
+      "url": "https://openai.com/index/openai-on-aws",
+      "source": "OpenAI",
+      "date": "2026-04-28",
+      "excerpt": "OpenAI GPT models, Codex, and Managed Agents are now available on AWS, enabling enterprises to build secure AI in their AWS environments.",
+      "type": "article"
+    },
+    {
+      "title": "Our commitment to community safety",
+      "url": "https://openai.com/index/our-commitment-to-community-safety",
+      "source": "OpenAI",
+      "date": "2026-04-28",
+      "excerpt": "Learn how OpenAI protects community safety in ChatGPT through model safeguards, misuse detection, policy enforcement, and collaboration with safety experts.",
+      "type": "article"
+    },
+    {
+      "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
       "source": "Hugging Face",
       "date": "2026-04-28",
       "excerpt": "",
       "type": "article"
+    },
+    {
+      "title": "Celebrating 20 years of Google Translate: Fun facts, tips and new features to try",
+      "url": "https://blog.google/products-and-platforms/products/translate/fun-facts-google-translate-20-years/",
+      "source": "Google AI",
+      "date": "2026-04-28",
+      "excerpt": "Google’s sharing 20 fun facts to celebrate Google Translate turning 20, from its roots as a 2006 AI experiment to supporting almost 250 languages today.",
+      "type": "article"
+    },
+    {
+      "title": "NVIDIA Launches Nemotron 3 Nano Omni Model, Unifying Vision, Audio and Language for up to 9x More Efficient AI Agents",
+      "url": "https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/",
+      "source": "Nvidia",
+      "date": "2026-04-28",
+      "excerpt": "AI agent systems today juggle separate models for vision, speech and language — losing time and context as they pass data from one model to the other. Unveiled today, NVIDIA Nemotron 3 Nano Omni is an",
+      "type": "article"
+    },
+    {
+      "title": "Into the Omniverse: Manufacturing’s Simulation-First Era Has Arrived",
+      "url": "https://blogs.nvidia.com/blog/manufacturing-simulation-first/",
+      "source": "Nvidia",
+      "date": "2026-04-28",
+      "excerpt": "Manufacturing’s traditional design-build-test cycle rested on a single assumption: Real-world testing was the only reliable test environment.",
+      "type": "article"
+    },
+    {
+      "title": "nexu-io/open-design — 🎨 Local-first, open-source alternative to Anthropic's Claude Design. ⚡ 19 Skills · ✨ 71 brand-grade Design Systems · 🖼️ sandboxed preview · 📦 HTML/PDF/PPTX export. 🤖 Runs on Claude Code / Codex / Cursor / Gemini CLI / OpenCode / Qwen.",
+      "url": "https://github.com/nexu-io/open-design",
+      "source": "GitHub",
+      "date": "2026-04-28",
+      "excerpt": "🎨 Local-first, open-source alternative to Anthropic's Claude Design. ⚡ 19 Skills · ✨ 71 brand-grade Design Systems · 🖼️ sandboxed preview · 📦 HTML/PDF/PPTX export. 🤖 Runs on Claude Code / Codex / Cursor / Gemini CLI / OpenCode / Qwen.",
+      "type": "repo"
     },
     {
       "title": "OpenAI available at FedRAMP Moderate",
@@ -34,14 +82,6 @@
       "type": "article"
     },
     {
-      "title": "Choco automates food distribution with AI agents",
-      "url": "https://openai.com/index/choco",
-      "source": "OpenAI",
-      "date": "2026-04-27",
-      "excerpt": "How Choco used OpenAI APIs to streamline food distribution, boost productivity, and unlock growth—an in-depth customer story on real-world AI impact.",
-      "type": "article"
-    },
-    {
       "title": "Announcing our partnership with the Republic of Korea",
       "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
       "source": "Google",
@@ -63,14 +103,6 @@
       "source": "Google AI",
       "date": "2026-04-27",
       "excerpt": "Google is bringing back its 5-Day AI Agents Intensive Course with Kaggle and registration is open.",
-      "type": "article"
-    },
-    {
-      "title": "Our principles",
-      "url": "https://openai.com/index/our-principles",
-      "source": "OpenAI",
-      "date": "2026-04-26",
-      "excerpt": "Our mission is to ensure that AGI benefits all of humanity. Sam Altman shares five principles that guide our work.",
       "type": "article"
     },
     {
@@ -111,38 +143,6 @@
       "source": "Google AI",
       "date": "2026-04-23",
       "excerpt": "Google has been a proud part of Austria’s landscape for years, and today, we’re announcing our first data center in Kronstorf, generating 100 direct jobs. This facility …",
-      "type": "article"
-    },
-    {
-      "title": "OpenAI’s New GPT-5.5 Powers Codex on NVIDIA Infrastructure — and NVIDIA Is Already Putting It to Work",
-      "url": "https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/",
-      "source": "Nvidia",
-      "date": "2026-04-23",
-      "excerpt": "AI agents have revolutionized developer workflows, and their next frontier is knowledge work: processing information, solving complex problems, coming up with new ideas and driving innovation. Codex, ",
-      "type": "article"
-    },
-    {
-      "title": "Tag, You’re It: GeForce NOW Levels Up Game Discovery With Xbox Game Pass and Ubisoft+ Labels",
-      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-in-app-labels/",
-      "source": "Nvidia",
-      "date": "2026-04-23",
-      "excerpt": "GeForce NOW is doubling down on what matters most: gamers. This week’s upgrades bring smarter libraries, making it easier than ever for gamers to turn a PC collection into a cloud-powered flex. It sta",
-      "type": "article"
-    },
-    {
-      "title": "Making Sense of the Early Universe",
-      "url": "https://blogs.nvidia.com/blog/ai-gpu-early-universe-astronomy/",
-      "source": "Nvidia",
-      "date": "2026-04-23",
-      "excerpt": "This Spring Astronomy Day, here’s a look at how AI and GPUs are helping astronomers work through unprecedented volumes of cosmic data.",
-      "type": "article"
-    },
-    {
-      "title": "Decoupled DiLoCo: A new frontier for resilient, distributed AI training",
-      "url": "https://deepmind.google/blog/decoupled-diloco/",
-      "source": "Google",
-      "date": "2026-04-22",
-      "excerpt": "",
       "type": "article"
     }
   ]
