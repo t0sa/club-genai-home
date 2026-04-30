@@ -1,12 +1,52 @@
 {
-  "updated_at": "2026-04-29",
+  "updated_at": "2026-04-30",
   "items": [
     {
-      "title": "OpenAI models, Codex, and Managed Agents come to AWS",
-      "url": "https://openai.com/index/openai-on-aws",
+      "title": "Where the goblins came from",
+      "url": "https://openai.com/index/where-the-goblins-came-from",
       "source": "OpenAI",
-      "date": "2026-04-28",
-      "excerpt": "OpenAI GPT models, Codex, and Managed Agents are now available on AWS, enabling enterprises to build secure AI in their AWS environments.",
+      "date": "2026-04-29",
+      "excerpt": "How goblin outputs spread in AI models: timeline, root cause, and fixes behind personality-driven quirks in GPT-5 behavior.",
+      "type": "article"
+    },
+    {
+      "title": "Building the compute infrastructure for the Intelligence Age",
+      "url": "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age",
+      "source": "OpenAI",
+      "date": "2026-04-29",
+      "excerpt": "OpenAI scales Stargate to build the compute infrastructure powering AGI, adding new data center capacity to meet growing AI demand.",
+      "type": "article"
+    },
+    {
+      "title": "Cybersecurity in the Intelligence Age",
+      "url": "https://openai.com/index/cybersecurity-in-the-intelligence-age",
+      "source": "OpenAI",
+      "date": "2026-04-29",
+      "excerpt": "OpenAI outlines a five-part action plan for strengthening cybersecurity in the Intelligence Age, focused on democratizing AI-powered cyber defense and protecting critical systems.",
+      "type": "article"
+    },
+    {
+      "title": "AI evals are becoming the new compute bottleneck",
+      "url": "https://huggingface.co/blog/evaleval/eval-costs-bottleneck",
+      "source": "Hugging Face",
+      "date": "2026-04-29",
+      "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "Granite 4.1 LLMs: How They’re Built",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-4-1",
+      "source": "Hugging Face",
+      "date": "2026-04-29",
+      "excerpt": "",
+      "type": "article"
+    },
+    {
+      "title": "DeepInfra on Hugging Face Inference Providers 🔥",
+      "url": "https://huggingface.co/blog/inference-providers-deepinfra",
+      "source": "Hugging Face",
+      "date": "2026-04-29",
+      "excerpt": "",
       "type": "article"
     },
     {
@@ -15,6 +55,14 @@
       "source": "OpenAI",
       "date": "2026-04-28",
       "excerpt": "Learn how OpenAI protects community safety in ChatGPT through model safeguards, misuse detection, policy enforcement, and collaboration with safety experts.",
+      "type": "article"
+    },
+    {
+      "title": "OpenAI models, Codex, and Managed Agents come to AWS",
+      "url": "https://openai.com/index/openai-on-aws",
+      "source": "OpenAI",
+      "date": "2026-04-28",
+      "excerpt": "OpenAI GPT models, Codex, and Managed Agents are now available on AWS, enabling enterprises to build secure AI in their AWS environments.",
       "type": "article"
     },
     {
@@ -50,38 +98,6 @@
       "type": "article"
     },
     {
-      "title": "nexu-io/open-design — 🎨 Local-first, open-source alternative to Anthropic's Claude Design. ⚡ 19 Skills · ✨ 71 brand-grade Design Systems · 🖼️ sandboxed preview · 📦 HTML/PDF/PPTX export. 🤖 Runs on Claude Code / Codex / Cursor / Gemini CLI / OpenCode / Qwen.",
-      "url": "https://github.com/nexu-io/open-design",
-      "source": "GitHub",
-      "date": "2026-04-28",
-      "excerpt": "🎨 Local-first, open-source alternative to Anthropic's Claude Design. ⚡ 19 Skills · ✨ 71 brand-grade Design Systems · 🖼️ sandboxed preview · 📦 HTML/PDF/PPTX export. 🤖 Runs on Claude Code / Codex / Cursor / Gemini CLI / OpenCode / Qwen.",
-      "type": "repo"
-    },
-    {
-      "title": "OpenAI available at FedRAMP Moderate",
-      "url": "https://openai.com/index/openai-available-at-fedramp-moderate",
-      "source": "OpenAI",
-      "date": "2026-04-27",
-      "excerpt": "OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies.",
-      "type": "article"
-    },
-    {
-      "title": "The next phase of the Microsoft OpenAI partnership",
-      "url": "https://openai.com/index/next-phase-of-microsoft-partnership",
-      "source": "OpenAI",
-      "date": "2026-04-27",
-      "excerpt": "OpenAI and Microsoft announce an amended agreement that simplifies the partnership, adds long-term clarity, and supports continued AI innovation at scale.",
-      "type": "article"
-    },
-    {
-      "title": "An open-source spec for orchestration: Symphony",
-      "url": "https://openai.com/index/open-source-codex-orchestration-symphony",
-      "source": "OpenAI",
-      "date": "2026-04-27",
-      "excerpt": "Learn how Symphony, an open-source spec for Codex orchestration, turns issue trackers into always-on agent systems—boosting engineering output and reducing context switching.",
-      "type": "article"
-    },
-    {
       "title": "Announcing our partnership with the Republic of Korea",
       "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
       "source": "Google",
@@ -106,27 +122,11 @@
       "type": "article"
     },
     {
-      "title": "DeepSeek-V4: a million-token context that agents can actually use",
-      "url": "https://huggingface.co/blog/deepseekv4",
-      "source": "Hugging Face",
-      "date": "2026-04-24",
-      "excerpt": "",
-      "type": "article"
-    },
-    {
       "title": "8 Gemini tips for organizing your space (and life)",
       "url": "https://blog.google/products-and-platforms/products/gemini/gemini-spring-cleaning-tips/",
       "source": "Google AI",
       "date": "2026-04-24",
       "excerpt": "Organize your home and digital space with Gemini. Use AI-powered tips for cleaning schedules, inbox decluttering, seasonal chores.",
-      "type": "article"
-    },
-    {
-      "title": "How to Use Transformers.js in a Chrome Extension",
-      "url": "https://huggingface.co/blog/transformersjs-chrome-extension",
-      "source": "Hugging Face",
-      "date": "2026-04-23",
-      "excerpt": "",
       "type": "article"
     },
     {
